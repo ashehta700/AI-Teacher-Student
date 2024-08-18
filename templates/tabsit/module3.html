@@ -1,0 +1,68 @@
+
+{% extends 'base.html' %}
+{%load static%}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+
+{% block content %}
+<div class="container pt-3 pb-5 mb-5">
+  <section class="rtl text-center mt-5" id="goals">
+    <h2 class="background-color-nav fw-bolder h2Header mb-5">مرحباً بك  فى الموديول الثالث</h2>
+    <h5 class="pb-4 text-end"> <span class="main-color"> الموديول الثالث: </span>إنتاج الإنفوجرافيك التفاعلي المدعم بالذكاء الاصطناعي باستخدام موقع Canva</h5>
+    <h6 class="pb-4 text-end"><span class="main-color fw-bold">الهدف الرئيس الثالث  :</span>الإلمام بطريقة إنتاج الإنفوجرافيك التعليمي التفاعلي باستخدام موقع Canva, ويتفرع منه الأهداف الإجرائية التالية:  </h6>
+    <h6 class="pb-4 text-end">مع نهاية دراسة هذا المحتوى, من المتوقع أن يكون الطالب المعلم قادرًا على أن: </h6>
+    <div class=" contentGoals">
+          <div class="row justify-content-center ">
+            <div class="col-md-6 wow  animate__animated animate__fadeInUp ">
+              <div>
+                <address class="serviceFooter" style="text-align: right;">
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يُعرِّف الانفوجرافيك التعليمي التفاعلي </p>
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يحلل استخدامات الإنفوجرافيك التفاعلي </p>
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يعرض بعض مواقع تصميم الإنفوجرافيك التفاعلي </p>
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 		يستنتج أمثلة لبعض أدوات التفاعل في الإنفوجرافيك التفاعلي </p>
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يُسمي بعض مواقع تصميم الإنفوجرافيك التفاعلي </p>
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>  	يذكر طريقة تسجيل الدخول على موقع Canva </p>
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>  	ينشئ إنفوجرافيك متحرك جديد باستخدام موقع Canva</p>
+                  <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يضيف اسمًا للإنفوجرافيك التفاعلي في موقع Canva </p> 
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>  	يغير الخلفية للإنفوجرافيك التفاعلي في موقع Canva</p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 		يدرج صفحة جديدة للإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>  	يدرج شكلًا جديدًا للإنفوجرافيك التفاعلي في موقع Canva</p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يستخدم أداة الرسم الحر في الإنفوجرافيك التفاعلي في موقع Canva</p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> يدرج رسمًا بيانيًا للإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>	يحدد طريقة إضافة جدول في الإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يحلل طريقة إضافة صورة للإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>  	يستنبط خطوات إضافة مقطع صوتي للإنفوجرافيك التفاعلي في موقع Canva</p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 		يحلل مزايا إضافة نص للإنفوجرافيك التفاعلي من خلال موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>	يحلل طريقة إضافة حركة للكائنات في الإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يذكر خطوات الكتابة باستخدام الذكاء الاصطناعي في الإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 		يستخلص طريقة تعديل النصوص باستخدام الذكاء الاصطناعي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 	يضيف أسئلة للإنفوجرافيك التفاعلي من خلال موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>  	يُلخص عناصر التفاعل في الإنفوجرافيك التفاعلي في موقع Canva</p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 		ينشىء صور بالذكاء الاصطناعي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>	يستنبط طريقة استخدام قالب جاهز في الاإنفوجرافيك التفاعلي من خلال موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> 		يستنبط طريقة إضافة مشاركين في الإنفوجرافيك التفاعلي في موقع Canva</p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>		ينشئ نسخة من الإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>			يعاين الإنفوجرافيك التفاعلي من خلال موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>			يُلخص طريقة مشاركة الإنفوجرافيك التفاعلي في موقع Canva </p>
+                   <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>			يذكرخطوات تنزيل الإنفوجرافيك التفاعلي لجهازه الشخصي في موقع Canva </p>
+                </address>
+              </div>
+            </div>
+
+
+            <div class="col-md-5 wow animate__animated animate__zoomIn">
+              <div>
+                <img src="{%static 'img/31.jpg'%}" alt="" class="w-100 d-block mb-4 rounded-3">
+                <a class="goExam ms-auto" href="{% url 'quiz_question' quiz_name='beforemodule3tabsit' %}"> الدخول الى الاختبار القبلي للموديل الثالث</a>
+                <a class="goExam ms-auto mt-3" href="{% url 'tabsit_module' module_number=3 %}">الدخول الى المحتوى</a>
+
+              </div>
+            </div>
+  
+          </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

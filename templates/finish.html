@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{%load static%}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+
+{% block content %}
+<section class="rtl text-center mt-5" id="goals">
+  <h2 class="background-color-nav fw-bolder h2Header mb-5"> <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> تم الانتهاء من دراسة المحتوى بنجاح</p></h2>
+
+  
+<a  href="{% url 'index' %}" class="btn btn-success m-5 text-center text-white">العودة للصفحة الرئيسية <i class="fa-solid fa-home"></i></a>
+  </section>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "All Quizzes" %}{% endblock %}
+
+{% block content %}
+{% comment %} <div class="container d-flex align-items-center" >
+    <div class=""> {% endcomment %}
+<div class="container mt-5" style="min-height: 80vh;" dir="rtl">
+    <h2 class="text-center">{% trans "جميع الاختبارات التي تم حلها " %}</h2>
+
+    {% if sitting_list %}
+        <form action="" method="GET">
+            <div class="row mb-3 justify-content-start mt-5">
+                <div class="col-md-3">
+                    <input type="text" name="user_filter" placeholder="{% trans 'برجاء كتابة إسم المستخدم' %}" class="form-control"/>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" name="quiz_filter" placeholder="{% trans 'برجاء كتابة إسم الاختبار' %}" class="form-control"/>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary btn-block">{% trans "بحث" %}</button>
+                    
+                </div>
+                <div class="col-md-2">
+                    
+                    <a href="/marking/" class="btn btn-danger btn-block">{% trans "إلغاء البحث" %}</a>
+                </div>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark" style="background: #093f7e !important;">
+                    <tr>
+                        <th scope="col">{% trans "مسلسل" %}</th>
+                        <th scope="col">{% trans "إسم المستخدم" %}</th>
+                        <th scope="col">{% trans "إسم الاختبار" %}</th>
+                        <th scope="col">{% trans "نوع الاختبار" %}</th>
+                        <th scope="col">{% trans "تاريخ الانتهاء من الحل" %}</th>
+                        <th scope="col">{% trans "النسبة المئوية" %}(%)</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sitting in sitting_list %}
+                        <tr>
+                            <td>{{ sitting.id }}</td>
+                            <td>{{ sitting.user }}</td>
+                            <td>{{ sitting.quiz }}</td>
+                            <td>{{ sitting.quiz.category.category }}</td>
+                            <td>{{ sitting.end|date }}</td>
+                            <td>{{ sitting.get_percent_correct }}</td>
+                            <td>
+                                <a href="{% url 'quiz_marking_detail' pk=sitting.id %}" class="btn btn-success btn-sm">
+                                    {% trans "اظهار التفاصيل" %}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="text-center">{% trans "عفواً لا يــــوجد إختبارات تم حلها نهائياً" %}.</p>
+    {% endif %}
+</div>
+{% endblock %}

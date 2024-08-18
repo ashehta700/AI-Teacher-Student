@@ -1,0 +1,642 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+{%load static%}
+
+{% block content %}
+  <!-- =======================================vedio1-================================= -->
+  <div class="mt-5 py-5" id="fristVideoContainer">
+    <h2 class="background-color-nav fw-bolder h2Header mb-5">مرحباً بك فى الموديول الثانى</h2>
+
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6  ">
+                <div id="player" claas="w-100 "></div>
+        <div class="d-flex justify-content-between align-items-center">
+            <button class="btn  px-4 mb-4 mt-4" id="next1" disabled> التالي <i
+                class="fa-solid fa-paper-plane"></i></button>
+                <!-- <a  href="{% url 'index'  %}" class="back textDecoration py">عودة للصفحة الرئيسية  <i class="fa-solid fa-rotate-left"></i></a> -->
+                <!-- <button class="back textDecoration py-2 backQuioz" id="befor1" disabled> السابق <i class="fa-solid fa-rotate-left"></i></button> -->
+
+        </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio1">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> تعريف الإنفوجرافيك الثابت</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6 class="main-color">تعريف الإنفوجرافيك الثابت <i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+
+                        <p>الإنفوجرافيك الثابت هو شكل من أشكال التواصل البصري يستخدم الصور والرسومات البيانية والنصوص لعرض المعلومات والبيانات بطريقة جذابة وشيقة. يتميز الإنفوجرافيك الثابت بعدم وجود حركات أو تفاعلات، حيث يعرض المعلومات في شكل ثابت</p>
+                        <br>
+                        <h6 class="main-color">استخدامات الإنفوجرافيك الثابت<i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+
+                  <p>:تتعدد استخدامات الإنفوجرافيك الثابت، ومن أبرزها</p>
+                  <p> 	التثقيف والتوعية <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>  
+                  <p> 	التسويق والترويج <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>   
+                  <p> 	التعلم والتعليم <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>   
+                  <p> التواصل والإعلام <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>   
+                        
+                </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- =======================================vedio2-================================= -->
+    <div class="mt-5 py-5" id="secondVideoContainer" style="display: none;">
+        <div class="container">
+            <div class="row m-0 p-0">
+                <div class="col-md-6 animate__animated animate__zoomIn">
+                    <div id="secondPlayer" class="w-100 animate__animated animate__zoomIn"></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn  px-4 mb-4 mt-4" id="next2" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                            <button class="back textDecoration py-2 backQuioz" id="befor2" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+    
+                    </div>
+                </div>
+                <div class="col-md-6" id="ts3limatVedio1">
+                    <div class="text-end">
+                        <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> إنشاء إنفوجرافيك ثابت باستخدام موقع Visme</h5>
+                        <address class="serviceFooter" style="text-align: right;">
+                            <h5 class="main-color fw-bold"> :تسجيل الدخول </h5>
+                            <p>الدخول على متصفح Chrome <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>  
+                            <p>الدخول للرابط https://www.visme.com <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>  
+                            <p>يكتب الايميل الشخصي على Gmail <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p> 
+                            <br> 
+                            <h5 class="main-color fw-bold  "> إنشاء إنفوجرافيك ثابت جديد باستخدام موقع Visme </h5>
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	فتح قائمة create أعلى الشاشة </p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار أيقونة Infographic</p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	اختيار Create your infographic </p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	اختيار Blank Template</p>  
+
+                            <br> 
+                            <h5 class="main-color fw-bold rtl"> إضافة اسم للإنفوجرافيك الثابت: </h5>
+
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	النقر بالماوس على أيقونة Untitled  أعلى الشاشة </p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	النقر على علامة التعديل  </p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	كتابة اسم الإنفوجرافيك الثابت باستخدام لوحة المفاتيح </p>  
+                     
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =======================================vedio4-================================= -->
+    <div class="mt-5 py-5" id="v4VideoContainer" style="display: none;">
+        <div class="container">
+            <div class="row m-0 p-0">
+                <div class="col-md-6 animate__animated animate__zoomIn">
+                    <div id="v4Player" class="w-100 animate__animated animate__zoomIn"></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn  px-4 mb-4 mt-4" id="next4" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                            <button class="back textDecoration py-2 backQuioz" id="befor4" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+    
+                    </div>
+                </div>
+                <div class="col-md-6" id="ts3limatVedio4">
+                    <div class="text-end">
+                        <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span>التعامل مع الأجزاء الإنفوجرافيك الثابت   </h5>
+                        <address class="serviceFooter" style="text-align: right;">
+                            <h5 class="main-color fw-bold"> : إدراج جزء جديد </h5>
+                            <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> إضافة جزء فارغ من خلال أيقونة Add Empty block من القائمة الجانبية على يسار الإنفوجرافيك  </p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>إضافة قالب جاهز من خلال أيقونة  Add from templates من القائمة الجانبية على يسار الإنفوجرافيك    </p>  
+                            <br> 
+                            <h5 class="main-color fw-bold  ">:تحريك الأجزاء </h5>
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار Move up من القائمة الجانبية على يسار الإنفوجرافيك لتحريك الجزء لأعلى</p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار Move down من القائمة الجانبية على يسار الإنفوجرافيك لتحريك الجزء لأسفل</p>  
+
+
+                            <br> 
+                            <h5 class="main-color fw-bold rtl"> :نسخ الأجزاء </h5>
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>		تحديد الجزء بالنقر بالماوس عليه بالماوس</p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار Duplicate block  من القائمة الجانبية على يسار الإنفوجرافيك </p>  
+                     
+                            <br> 
+                            <h5 class="main-color fw-bold rtl"> :حذف الأجزاء </h5>
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> تحديد الجزء بالنقر بالماوس عليه بالماوس</p>  
+                            <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	اختيار Delete block من القائمة الجانبية يسار الإنفوجرافيك</p>  
+                     
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- =========================================================vedio5=========================== -->
+<div class="mt-5 py-5" id="v5VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0 ">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v5Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next5" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor5" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio5">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> إضافة الأشكال للإنفوجرافيك الثابت </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h5 class="main-color fw-bold"> :إضافة الأشكال للإنفوجرافيك الثابت </h5>
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Graphics على يسار الشاشة </p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار الشكل المطلوب بالنقر بالماوس عليه بالماوس فيتم إضافته  </p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تنسيق الشكل باستخدام الأدوات أعلى الشاشة</p>  
+
+               
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio6=========================== -->
+<div class="mt-5 py-5" id="v6VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v6Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next6" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor6" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio6">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> إضافة صورة للإنفوجرافيك الثابت في موقع Visme</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h5 class="main-color fw-bold"> :إضافة صور من الموقع للإنفوجرافيك الثابت</h5>
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Photos على يسار الشاشة</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>البحث عن الصور المتاحة في موقع Visme من خلال كتابة الكلمات المفتاحية في مربع البحث </p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>إضافة الصورة للإنفوجرافيك بالنقر بالماوس عليها </p>  
+                        <br> 
+                        <h5 class="main-color fw-bold  ">:إضافة صورة للإنفوجرافيك الثابت من جهاز الكمبيوتر</h5>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Photos على يسار الشاشة</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على upload</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على From my PC</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار الصورة المناسبة من جهاز الكمبيوتر</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على أيقونة open</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار الصورة من القائمة الجانبية باستخدام الماوس</p>  
+
+
+                        <br> 
+                        <h5 class="main-color fw-bold rtl"> :إضافة صورة من الإنترنت للإنفوجرافيك الثابت</h5>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Photos على يسار الشاشة</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على upload</p>   
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار by URL لإضافة رابط الصورة, أو Google Drive  أو One Drive </p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار الصورة</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على أيقونة open</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار الصورة من القائمة الجانبية باستخدام الماوس</p>  
+              
+                        <br> 
+                        <h5 class="main-color fw-bold rtl"> :إنشاء الصور باستخدام تقنية الذكاء الاصطناعي</h5>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Photos على يسار الشاشة</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	اختيار Generate AI image أسفل الشاشة</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	إضافة وصف للصورة في مربع Describe what you want to create</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار تصميم الصورة من خلال Select an image style</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	النقر بالماوس على Generate image فتظهر عدة خيارات</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	اختيار الصورة المناسبة بالنقر بالماوس عليها بالماوس</p>  
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	تنسيق الصورة باستخدام الأدوات أعلى الشاشة باستخدام الأدوات أعلى الشاشة</p>  
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio7=========================== -->
+<div class="mt-5 py-5" id="v7VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v7Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next7" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor7" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio7">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> إضافة النصوص للإنفوجرافيك الثابت في موقع Visme </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+               
+                                <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Basics على يسار الشاشة</p>       
+                                <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار  Header & Text </p>   
+                                <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار أسلوب النص المناسب</p>   
+                                <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> تنسيق النص باستخدام الأدوات أعلى الشاشة</p>   
+                                
+                             
+                            </address>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio8=========================== -->
+<div class="mt-5 py-5" id="v8VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v8Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next8" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor8" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio8">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> الكتابة الذكية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <h5 class="main-color fw-bold"> :إضافة النصوص</h5>
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار قائمة الإعدادات أعلى الشاشة</p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	اختيار Ai writer </p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	كتابة اسم الموضوع</p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	الضغط على Enter </p>  
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio9=========================== -->
+<div class="mt-5 py-5" id="v9VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v9Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next9" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor9" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio9">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> إضافة الرسوم البيانية  </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <h5 class="main-color fw-bold"> : إضافة الرسوم البيانية</h5>
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Data على يسار الشاشة</p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار Charts & Graphs </p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	النقر بالماوس على الشكل البياني لتحديده </p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> تعديل البيانات من تبويب Chart Data على يسار الشاشة </p>   
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تنسيق الشكل البياني باستخدام الأدوات أعلى الشاشة </p>   
+                       <br>
+                       <h5 class="main-color fw-bold"> :إضافة الجداول</h5>
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Data على يسار الشاشة </p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	اختيار Tables لإضافة الجدول</p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على الجدول لتنسيقه</p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على  editأسفل الجدول </p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> استخدام لوحة المفاتيح لإضافة البيانات</p>   
+                       <br>
+                       <h5 class="main-color fw-bold"> :إضافة الرسوم التخطيطية </h5>
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Basics على يسار الشاشة </p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار  Diagrams لإضافة الرسم التخطيطي </p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار الرسم التخطيطي المناسب</p>   
+                    
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio10=========================== -->
+<div class="mt-5 py-5" id="v10VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v10Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next10" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor10" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio10">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span>  تغيير الخلفية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <h5 class="main-color fw-bold"> : تغيير الخلفية </h5>
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Theme colors على يسار الشاشة</p>  
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار اللون الأزرق </p>  
+                       <br>
+                   
+                    
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio11=========================== -->
+<div class="mt-5 py-5" id="v11VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v11Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next11" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor11" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio11">
+                <div class="text-end">
+                    <h5 class="pb-2 rtl"> <span class="main-color"> الموديول الثاني: </span> إضافة QR code</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                    
+                       <h5 class="main-color fw-bold rtl"> :إضافة QR code</h5>
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة apps على يسار الشاشة</p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار .QR code  </p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	إضافة الرابط في مربع URL </p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على Generate Code </p>   
+  
+                    
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio12=========================== -->
+<div class="mt-5 py-5" id="v12VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v12Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next12" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor12" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio12">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> التعديل في قالب جاهز</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة create أعلى الشاشة</p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار Infographic.</p>  
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار Create your infographic </p> 
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيارالتصميم الجاهز المناسب</p> 
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على edit للتعديل في القالب الجاهز</p> 
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> سهولة استخدام المعلومات ومشاركتها مع المتعلمين</p> 
+                   
+                       
+                    </address>
+                 
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio13=========================== -->
+<div class="mt-5 py-5" id="v13VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v13Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next13" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor13" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio13">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> تابع التعديل في مع قالب جاهز</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة create أعلى الشاشة</p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار Infographic.</p>  
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار Create your infographic </p> 
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيارالتصميم الجاهز المناسب</p> 
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على edit للتعديل في القالب الجاهز</p> 
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> سهولة استخدام المعلومات ومشاركتها مع المتعلمين</p> 
+                   
+                       
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio14=========================== -->
+<div class="mt-5 py-5" id="v14VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v14Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next14" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor14" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio14">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> مشاركة الإنفوجرافيك الثابت </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                    
+                       <h5 class="main-color fw-bold"> :إضافة مشاركين للإنفوجرافيك الثابت</h5>
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة invite to collaborate أعلى الشاشة</p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>إضافة اسم الشخص</p>  
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تعديل خيارات المشاركة إلى can edit </p> 
+                     <br>
+                     <h5 class="main-color fw-bold"> :مشاركة الإنفوجرافيك الثابت مع الآخرين</h5>
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على أيقونة Share أقصى يمين الشاشة </p> 
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة copy link أو تحديد إعدادات المشاركة</p>  
+   
+                       
+                    </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>        
+<!-- =========================================================vedio15========================== -->
+<div class="mt-5 py-5" id="v15VideoContainer" style="display: none;" >
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v15Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next15" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <!-- <a  href="{% url 'index'  %}" class="back textDecoration py">عودة للصفحة الرئيسية  <i class="fa-solid fa-rotate-left"></i></a> -->
+                        <button class="back textDecoration py-2 backQuioz" id="befor15" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio15">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثاني: </span> :إنشاء نسخة من الإنفوجرافيك الثابت, ومعاينته, وتنزيله</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة الإعدادات أعلى يسار الشاشة </p>   
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>إنشاء نسخة من الإنفوجرافيك من خلال أيقونة Duplicate </p>   
+                      <br>
+                      <h5 class="main-color fw-bold"> :معاينة الإنفوجرافيك الثابت</h5>
+                       <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة Present أقصى يمين الشاشة</p>   
+
+                     <br>
+                     <h5 class="main-color fw-bold"> :تنزيل الإنفوجرافيك الثابت إلى جهاز الكمبيوتر </h5>
+                     <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار أيقونة   download أعلى يسار الشاشة</p>   
+                     <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار تنسيق الصور المناسب</p>      
+                     <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على download </p>     
+                    </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ====================================================activity======================================== -->
+<div class="mt-5 py-5" id="activity" style="display: none;">
+    <div class="container">
+
+
+                <div class="text-end">
+                    <h5 class="p-2">: نشاط (2)  </h5>
+<h3 class="text-center my-5 py-5"> ثم قم بإرسال الرابط من خلال بيئة التعلم  قم بانشاء إنفوجرافيك ثابت من خلال موقع Visme </h3>
+
+<button class="btn  px-4 mb-4 mt-4 d-flex" id="finish" > التالي <i
+    class="fa-solid fa-paper-plane"></i></button>
+    
+                </div>
+     
+    </div>
+</div>
+<!-- ======================================================== -->
+<div class="mt-5 py-5" id="test" style="display: none;" >
+    <div class="container">
+
+
+                <div class="text-center d-flex flex-column align-items-center">
+                    <h2 class="main-color"> أحسنت  </h2>
+                    <iframe src="https://giphy.com/embed/7ATh0I7hi5OWyd66XE" width="480" height="480" ></iframe>
+                    <a id="quiz_question" class="btn px-4 mx-2 mb-2 " href="{% url 'quiz_question' quiz_name='aftermodule2tabsit'%}">الاختبار البعدى للموديل الثانى </a>
+                </div>
+     
+    </div>
+</div>
+<!-- =======================================last-================================ -->
+
+
+<script src="{% static 'js/vedios2.js' %}"></script>
+<script>
+
+document.getElementById("befor2").addEventListener("click" , function () {
+        document.getElementById("fristVideoContainer").style.display = 'block';
+        document.getElementById("next1").style.display = 'block';   
+        document.getElementById("player").style.display = 'block'; 
+        document.getElementById("ts3limatVedio1").classList.remove("d-none")
+        document.getElementById("secondVideoContainer").style.display = 'none';
+  
+})
+
+    document.getElementById("befor4").addEventListener("click" , function () {
+        document.getElementById("secondVideoContainer").style.display = 'block';
+        document.getElementById("next2").style.display = 'block'; 
+  document.getElementById("v4VideoContainer").style.display = 'none'; 
+})
+
+document.getElementById("befor5").addEventListener("click" , function () {
+        document.getElementById("v4VideoContainer").style.display = 'block';
+        document.getElementById("next4").style.display = 'block'; 
+  document.getElementById("v5VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor6").addEventListener("click" , function () {
+        document.getElementById("v5VideoContainer").style.display = 'block';
+        document.getElementById("next5").style.display = 'block'; 
+  document.getElementById("v6VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor7").addEventListener("click" , function () {
+        document.getElementById("v6VideoContainer").style.display = 'block';
+        document.getElementById("next6").style.display = 'block'; 
+  document.getElementById("v7VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor8").addEventListener("click" , function () {
+        document.getElementById("v7VideoContainer").style.display = 'block';
+        document.getElementById("next7").style.display = 'block'; 
+  document.getElementById("v8VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor9").addEventListener("click" , function () {
+        document.getElementById("v8VideoContainer").style.display = 'block';
+        document.getElementById("next8").style.display = 'block'; 
+  document.getElementById("v9VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor10").addEventListener("click" , function () {
+        document.getElementById("v9VideoContainer").style.display = 'block';
+        document.getElementById("next9").style.display = 'block'; 
+  document.getElementById("v10VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor11").addEventListener("click" , function () {
+        document.getElementById("v10VideoContainer").style.display = 'block';
+        document.getElementById("next10").style.display = 'block'; 
+  document.getElementById("v11VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor12").addEventListener("click" , function () {
+        document.getElementById("v11VideoContainer").style.display = 'block';
+        document.getElementById("next11").style.display = 'block'; 
+  document.getElementById("v12VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor13").addEventListener("click" , function () {
+        document.getElementById("v12VideoContainer").style.display = 'block';
+        document.getElementById("next12").style.display = 'block'; 
+  document.getElementById("v13VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor14").addEventListener("click" , function () {
+        document.getElementById("v13VideoContainer").style.display = 'block';
+        document.getElementById("next13").style.display = 'block'; 
+  document.getElementById("v14VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor15").addEventListener("click" , function () {
+        document.getElementById("v14VideoContainer").style.display = 'block';
+        document.getElementById("next14").style.display = 'block'; 
+  document.getElementById("v15VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor16").addEventListener("click" , function () {
+        document.getElementById("v15VideoContainer").style.display = 'block';
+        document.getElementById("next15").style.display = 'block'; 
+  document.getElementById("v16VideoContainer").style.display = 'none';  
+})
+</script>
+ 
+    <!-- <a href="{% url 'quiz_question' quiz_name='aftermodule2tabsit'%}">الاختبار البعدى للموديل الثانى</a> -->
+{% endblock %}

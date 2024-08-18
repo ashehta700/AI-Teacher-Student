@@ -1,0 +1,766 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+{%load static%}
+
+{% block content %}
+<!-- =======================================vedio1-================================= -->
+<div class="mt-5 py-5" id="fristVideoContainer">
+    <h2 class="background-color-nav fw-bolder h2Header mb-5">مرحباً بك فى الموديول الاول</h2>
+
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6  ">
+                <div id="player" claas="w-100 "></div>
+        <div class="d-flex justify-content-between align-items-center">
+            <button class="btn  px-4 mb-4 mt-4" id="next1" disabled> التالي <i
+                class="fa-solid fa-paper-plane"></i></button>
+                <!-- <a  href="{% url 'index'  %}" class="back textDecoration py">عودة للصفحة الرئيسية  <i class="fa-solid fa-rotate-left"></i></a> -->
+                <!-- <button class="back textDecoration py-2 backQuioz" id="befor1" disabled> السابق <i class="fa-solid fa-rotate-left"></i></button> -->
+
+        </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio1">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> تعريف الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p>الثقافة البصرية هي مجموعة القيم والمعتقدات والممارسات والتعابير التي ترتبط بالرؤية والوسائط
+                            البصرية. تعتبر الثقافة البصرية جزءًا من الثقافة العامة للمجتمع، وتتعلق بكيفية فهمنا وتفسيرنا
+                            للعالم من خلال المشاهدة والتصوير والتصميم.</p>
+                      
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =======================================vedio2-================================= -->
+<div class="mt-5 py-5" id="secondVideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="secondPlayer" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next2" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor2" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio1">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span>خصائص الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تعدد العناصر   </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	العالمية  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  الديناميكية </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	مؤثرة  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> تعددية الثقافة البصرية   </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> التجدد المستمر للثقافة البصرية   </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	التأثير المتبادل للثقافة البصرية </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  	الاعتماد على البصر </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  	التعبير عن الأفكار والمشاعر  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  	الإقناع والتأثير  </p> 
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio4=========================== -->
+<div class="mt-5 py-5" id="v4VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v4Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next4" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor4" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio4">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span>أهمية الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  التواصل  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>   التعبير الفني </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>   الإعلان والتسويق </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>   الثقافة والتراث </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>   التأثير الاجتماعي </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  تنمي مهارات الإدراك البصري  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> تنمي مهارات التفكير الإبداعي وحل المشكلات   </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>   التعليم والتوعية. </p> 
+
+
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio5=========================== -->
+<div class="mt-5 py-5" id="v5VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0 ">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v5Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next5" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor5" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio5">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> مجالات الثقاقة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6 class="main-color">التفكير البصري: <i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+                        <p> تمثيل تفكيري يسبق الوعي, ويشمل رؤية الأشكال البصرية على أنها صور مثل الرسوم, والعلامات
+                            والرموز, وتشمل تنظيم الصور العقلية التي تدور حول الأشكال, والخطوط, والألوان, والأنسجة,
+                            والمكونات. كما يمكن تعريفه بأنه التفاعل بين الرؤية والرسم والتخيل.
+                            تنظيم الصور العقلية المرتبطة بالأشكال, والخطوط, والألوان, والأنسجة, والمكونات
+                        </p>
+                        <br>
+                        <h6 class="main-color"> التعلم البصري:<i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+                <p>يشمل التعلم من خلال البصريات مثل الصور والوسائط المختلفة.
+                    التعلم من خلال البصريات, والأبحاث في مجال تصميم البصريات للتعليم.
+                    </p>
+                    <br>
+                    <h6 class="main-color"> الاتصال  البصري:<i
+                        class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+                    <p>محاولة البشر استخدام الرموز التعبيرية والخطية للتعبير عن الأفكار, وتعليم الناس داخل وخارج النظم التعليمية.
+                        استخدام الرموز البصرية للتعبير عن الأفكار, وتوضيح المعاني
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio6=========================== -->
+<div class="mt-5 py-5" id="v6VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v6Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next6" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor6" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio6">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> عناصر الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  الخطوط المستقيمة والمنحنية والمتقطعة  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  الأشكال  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  الألوان  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  المساحة  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النسبة  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النصوص  </p> 
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio7=========================== -->
+<div class="mt-5 py-5" id="v7VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v7Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next7" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor7" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio7">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> الانفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h5 class="main-color fw-bold"> : تعريف الإنفوجرافيك</h5>
+                        <h6>الإنفوجرافيك هو تمثيل مرئي للبيانات, والمعلومات, والمعرفة, ويعمل الإنفوجرافيك على تقديم
+                            المعلومات المعقدة بسرعة ووضوح, وأقل عدد من الكلمات</h6>
+                        <br>
+                        <h5 class="main-color fw-bold"> :عناصر الإنفوجرافيك التعليمي </h5>
+                        <h6> : وتشتمل الإنفوجرافيك على العناصر التالية</h6>
+                        <p> العناصر المرئية (الألوان, والرسوم, والرموز, والأيقونات)<i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </p>
+                        <p>عناصر المعرفة (الحقائق, والمراجع, والإحصاء, والنصوص) <i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </p>
+                        <p>عناصر المحتوى (المقدمة, والرسالة, والمعلومات) <i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </p>
+                        <img src="{%static 'img/34.jpg'%}" alt="" class="w-75">
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio8=========================== -->
+<div class="mt-5 py-5" id="v8VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v8Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next8" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor8" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio8">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> الفرق بين الإنفوجرافيك التعليمي
+                        والمفاهيم المرتبطة به</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <h5 class="main-color fw-bold"> :الإنفوجرافيك والثقافة البصرية</h5>
+                        <p>الثقافة البصرية هي مجموعة القيم, والمعتقدات, والممارسات, والتعابير التي ترتبط بالرؤية
+                  <p>الإنفوجرافيك يعتبر نوعًا محددًا من التقافة البصرية، وهو يعتمد بشكل أساسي على الرسومات والرموز والأيقونات لنقل المعلومات. يستخدم الإنفوجرافيك التصميم البصري لجذب الانتباه وإيصال المعلومات بشكل بسيط وسريع</p>
+                        <br>
+                        <h5 class="main-color fw-bold"> :الإنفوجرافيك والثقافة الرقمية</h5>
+<p>الإنفوجرافيك يسهم بشكل كبير في تعزيز الثقافة الرقمية، حيث يمكن استخدامه لنقل المعرفة والثقافة بطريقة مبسطة وجذابة، ويمكن توزيعه ومشاركته بسهولة عبر وسائل التواصل الاجتماعي, والمنصات الرقمية المختلفة</p>
+                        <h5 class="main-color fw-bold"> :الإنفوجرافيك التعليمي وتمثيل البيانات</h5>
+                <p>تمثيل البيانات يعرض جزءًا فقط من البيانات وبخاصة البيانات الإحصائية, أما الإنفوجرافيك فيعرض الموضوع كاملًا. وبالتالي, فتمثيل البيانات هو أحد أنواع الإنفوجرافيك </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio9=========================== -->
+<div class="mt-5 py-5" id="v9VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v9Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next9" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor9" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio9">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :خصائص الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6>يمكن تلخيص خصائص الإنفوجرافيك التعليمي في النقاط التالية</h6>
+                        <br>
+                        <h5 class="main-color fw-bold"> :خصائص الإنفوجرافيك التعليمي  </h5>
+                        <p> <span class="main-color fw-bold"> :الترميز والاختصار </span> فالإنفوجرافيك يمتاز باختزال الكثير من النصوص في عناصر محددة</p>
+                        <p> <span class="main-color fw-bold"> :الاتصال البصري</span> يعتمد الإنفوجرافيك على تمثيل المعلومات بصريًا مما يسهل استيعابها</p>
+                        <p> <span class="main-color fw-bold"> :القابلية للمشاركة</span> يمكن مشاركة الإنفوجرافيك بسهولة</p>
+                        <p> <span class="main-color fw-bold"> :التصميم الجذاب</span>يساعد الإنفوجرافيك بدور كبير في جذب انتباه المتعلم </p>
+                        <p> <span class="main-color fw-bold"> :قدرته الإثرائية</span>يمكن إثراء الإنفوجرافيك من خلال إضافة الروابط </p>
+                         </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio10=========================== -->
+<div class="mt-5 py-5" id="v10VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v10Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next10" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor10" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio10">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :أنواع الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <br>
+                        <h5 class="main-color fw-bold" > : الإنفوجرافيك الثابت </h5>
+<p>يتم تقديمه بدون حركة سواءً رقمي أو مطبوع, وغالبًا ما تكون صورة واحدة بدون أي عناصر متحركة, وينقسم إلى قسمين: الإنفوجرافيك الأفقي, والرأسي</p>
+                      <br>
+<h5 class="main-color fw-bold"> : الإنفوجرافيك المتحرك</h5>
+<p>يستخدم الألوان, والأصوات, والانتقالات لجذب انتباه المستخدم وتظهر في مواقع التواصل الاجتماعي, والأجهزة الرقمية, والتليفزيون والفيديو</p>
+<br>
+<h5 class="main-color fw-bold"> : الإنفوجرافيك التفاعلي</h5>
+<p>يسمح للمستخدم بالتفاعل مع الإنفوجرافيك مثل الإجابة عن بعض الأسئلة, ويحتوي على عناصر متحركة تتيح للمستخدم التفاعل مع البيانات</p>
+</address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio11=========================== -->
+<div class="mt-5 py-5" id="v11VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v11Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next11" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor11" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio11">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :أهداف استخدام الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                      
+                        <p> تنظيم الأفكار بطريقة مفيدة ومتماسكة من خلال توضيح المفاهيم الأساسية بصريًا وإعادة ترتيب الأفكار<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                    
+                        <p> توضيح البيانات الإحصائية بسهولة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>
+                        <p> توضيح العلاقات بين المفاهيم المعقدة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> المقارنة بين المعلومات, وتوضيح الخصائص المميزة للموضوعات<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p>جعل البيانات ذات معنى من خلال الأمثلة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> السرد القصصي بطريقة مثيرة تجمع بين النصوص والصور<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> إقناع القارئ بالمعلومات<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> عرض المعلومات في الكتب, والمجلات, والعروض, والملصقات, والإعلانات, ومواقع التواصل الاجتماعي<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> عرض المعلومات المركبة بصورة مفصلة وبسيطة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>    
+                        <p> القبول: وتعتمد على فكرة الاتصال المرئي وجذب انتباه المتعلم<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p> 
+                        <p> الفهم: ينبغي أن يُمكن الإنفوجرافيك القارئ من فهم المعلومات المقدمة بسهولة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                     
+                        <p> الاحتفاظ بالمعلومات: وهي قدرة الإنفوجرافيك على جعل المتعلم يتذكر المعلومات الموجودة في الإنفوجرافيك<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                     
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio12=========================== -->
+<div class="mt-5 py-5" id="v12VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v12Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next12" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor12" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio12">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :معايير تصميم الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                  
+
+
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  <div class="d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                    <h6 class="m-0 pb-0">:معايير تتعلق بالعنوان </h6>
+                                  </div>
+                                  
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  <address class="serviceFooter rtl" style="text-align: right;">
+                                    <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> كتابة العنوان في مركز الإنفوجرافيك </p>
+                                    <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>اختيار عنوان قصير</p>
+                                    <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>العنوان يعبر عن المحتوى</p>
+                                    <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>كتابة العنوان بحجم كبير</p>
+                                  </address>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0">معايير تتعلق بتنسيق النص </h6>
+                                    </div>
+                                    
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام أنواع خطوط
+                                        مقروءة</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين حجم الإنفوجرافيك
+                                        والمحتوى الموجود فيه</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين العنوان الرئيس
+                                        والعناوين الفرعية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عدم استخدام أنواع خطوط مختلفة في الإنفوجرافيك الواحد</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عدم الافراط في إضافة المسافات بين الأسطر</p>
+                                
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0"> معايير تتعلق بجودة المحتوى</h6>
+                                    </div>
+                                   
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                  data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> - توضيح العناصر
+                                        الأساسية والفرعية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> دقة البيانات والحقائق, والصور
+                                        المستخدمة, والرسوم البيانية والتوضيحية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> صحة المفاهيم والتعريفات المستخدمة
+                                      </p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> صحة المحتوى من الناحية اللغوية
+                                      </p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عرض المحتوى باختصار</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> تحقيق الوحدة للمحتوى</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عرض المحتوى في إطار قصصي</p>
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0"> معايير اختيار الرسوم والصور</h6>
+                                    </div>
+                                    
+                                  </button>
+                                </h2>
+                                <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الصور
+                                        المناسبة</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين النصوص والرسوم والصور
+                                        التوضيحية</p>
+                        
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">                
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0">   معايير  تتعلق باختيار الألوان</h6>
+                                    </div>
+                                  </button>
+                                </h2>
+                                <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الألوان
+                                        الهادئة للخلفية, والألوان الزاهية للنص</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الألوان الأكثر سطوعًا
+                                        للعناصر المهمة, والأقل سطوعًا للعناصر الفرعية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين الألوان في حالة استخدام أكثر من لون للنص</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التباين بين لون النص والخلفية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>استخدام الألوان المناسبة والمريحة للعين</p>
+                
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">                 
+                                     <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0">    معايير تتعلق بالتصميم والجماليات</h6>
+                                    </div>
+                                  </button>
+                                </h2>
+                                <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> اختيار التصميم
+                                        المناسب للجهاز(طولي- عرضي). </p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> تصميم الإنفوجرافيك بحجم مناسب</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> اختيار نوع الإنفوجرافيك المناسب
+                                        للمحتوى</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> إضافة الروابط لمزيد من المعلومات
+                                        هو أحد العناصر المهمة</p>
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                            </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio13=========================== -->
+<div class="mt-5 py-5" id="v13VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v13Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next13" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor13" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio13">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :برمجيات تصميم الإنفوجرافيك التعليمي </h5>
+                    <address class="serviceFooter rtl" style="text-align: right;">
+
+                        <p> <span class="main-color fw-bold"> Adobe Photoshop :</span> هو برنامج تحرير الصور الرائد في العالم. ويُستخدم لتحرير الصور, وإنشاء الرسومات الرقمية</p>
+                        <p> <span class="main-color fw-bold">CorelDRAW :</span> هو برنامج رسومات متجهة يُستخدم لإنشاء الرسومات, واللوحات, والتصاميم الأخرى</p>
+                        <p> <span class="main-color fw-bold"> Illustrator Adobe :</span> هو برنامج رسومات متجهة يُستخدم لإنشاء الرسومات, وهو مشابه لـ CorelDRAW، ولكنه أكثر شيوعًا بين المصممين المحترفين</p>
+                        <p> <span class="main-color fw-bold"> InDesign :</span>و برنامج نشر مكتبي يُستخدم لإنشاء تخطيطات للمنشورات المطبوعة والرقمية </p>
+                        <p> <span class="main-color fw-bold"> Adobe Aftereffect :</span>هو برنامج مؤثرات بصرية يُستخدم لإنشاء الرسوم المتحركة, والتأثيرات المرئية للأفلام والتلفزيون والويب</p>
+                        <br>
+                   <div class="contentwebsite ">
+                    <h5 class="main-color fw-bold"> :مواقع تصميم الإنفوجرافيك التعليمي</h5>
+                    <p> Piktochart <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Venngage <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                    <p> Easei.ly <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Infogr.am <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Visua.ly <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Canva <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>   
+                   </div>         
+
+                    </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- =========================================================vedio14=========================== -->
+<div class="mt-5 py-5" id="v14VideoContainer" style="display: none;" >
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v14Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next14" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <button class="back textDecoration py-2 backQuioz" id="befor14" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio14">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :خطوات تصميم الإنفوجرافيك</h5>
+                    <address class="serviceFooter rtl" style="text-align: right;">
+
+                        <p> <span class="main-color fw-bold"> المرحلة الثانية :</span> صياغة الهدف العام والأهداف التعليمية: في هذه المرحلة يتم صياغة الهدف العام للإنفوجرافيك, وصياغة الأهداف الفرعية </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الثالثة :</span> تحليل خصائص المتعلمين: تحديد خصائص المتعلمين في الانفوجرافيك يساعد على توجيه التصميم نحو الجمهور المستهدف بشكل أفضل مثل مستوى المعرفة, والاهتمامات, وأسلوب التعلم </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الرابعة :</span> جمع المعلومات الصحيحة وتوثيقها: جمع المعلومات الصحيحة وتوثيقها من مصادر متعددة هو خطوة مهمة في تصميم الانفوجرافيك لضمان دقة ومصداقية المحتوى </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الخامسة :</span>وضع سيناريو التصميم: وضع سيناريو التصميم هو عملية تحديد كيفية تنظيم المعلومات والعناصر البصرية داخل الانفوجرافيك بشكل منطقي وجذاب, وضمان لجودة الإنتاج </p>
+                        <p> <span class="main-color fw-bold"> المرحلة السادسة :</span> اختيار نوع الإنفوجرافيك المناسب للهدف: يتم تحديد نوع الإنفوجرافيك المناسب من بين الأنواع التي سبق ذكرها</p>
+                        <p> <span class="main-color fw-bold"> المرحلة السابعة :</span>اختيار الأدوات التكنولوجية المناسبة: وفي هذه المرحلة يتم تحديد الأدوات التكنولوجية المناسبة </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الثامنة :</span>الإنتاج المبدئي للإنفوجرافيك: وفي هذه المرحلة يتم إنتاج الإنفوجرافيك بشكل مبدئي في ضوء سيناريو التصميم, مع مراعاة معايير تصميم وإنتاج الإنفوجرافيك التي سبق ذكرها </p>
+                        <p> <span class="main-color fw-bold"> المرحلة التاسعة :</span> التقويم: في هذه المرحلة، يتم مراجعة الإنفوجرافيك النهائي بعد إنتاجه المبدئي وتقييمه بغرض التأكد من جودته وفعاليته في تحقيق الهدف </p>
+
+                    </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- =========================================================vedio15========================== -->
+<div class="mt-5 py-5" id="v15VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v15Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next15" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+                        <!-- <a  href="{% url 'index'  %}" class="back textDecoration py">عودة للصفحة الرئيسية  <i class="fa-solid fa-rotate-left"></i></a> -->
+                        <button class="back textDecoration py-2 backQuioz" id="befor15" > السابق <i class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio15">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :مميزات تصميم الإنفوجرافيك بتقنيات الذكاء الاصطناعي</h5>
+                    <address class="serviceFooter rtl" style="text-align: right;">
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> جعل المعلومات أكثر وضوحًا وفهمًا   </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  جعل المعلومات أكثر تفاعلية  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  جعل المعلومات أكثر إثارة للاهتمام  </p> 
+                        <h6> أدوات إنتاج الإنفوجرافيك بتقنيات الذكاء الاصطناعي  </h6>
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  Canva  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  Infogram  </p> 
+                        <p class="rtl">	<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>   Visme </p> 
+                                        </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ====================================================activity======================================== -->
+
+<div class="mt-5 py-5" id="activity" style="display: none;">
+    <div class="container">
+
+
+                <div class="text-end">
+                    <h5 class="pb-2">: نشاط (1)  </h5>
+<h2> . استخلص تطبيقات الثقافة البصرية في مجالات الحياة المختلفة  </h2>
+<textarea name="" id="" cols="90" rows="10" class="d-block w-100 "></textarea>
+<button class="btn  px-4 mb-4 mt-4 d-flex" id="finish" > التالي <i
+    class="fa-solid fa-paper-plane"></i></button>
+    
+                </div>
+     
+    </div>
+</div>
+<!-- ======================================================== -->
+<div class="mt-5 py-5" id="test" style="display: none;" >
+    <div class="container">
+
+
+                <div class="text-center d-flex flex-column align-items-center">
+                    <h2 class="main-color"> أحسنت  </h2>
+                    <iframe src="https://giphy.com/embed/7ATh0I7hi5OWyd66XE" width="480" height="480" ></iframe>
+                    <a id="quiz_question" class="btn px-4 mx-2 mb-2 " href="{% url 'quiz_question' quiz_name='aftermodule1tabsit'%}">الاختبار البعدى للموديل الاول </a>
+                </div>
+     
+    </div>
+</div>
+<!-- =======================================last-================================ -->
+
+<!-- =======================================vedio3-================================ -->
+<script src="{% static 'js/vedios.js' %}"></script>
+<script>
+
+document.getElementById("befor2").addEventListener("click" , function () {
+        document.getElementById("fristVideoContainer").style.display = 'block';
+        document.getElementById("next1").style.display = 'block';   
+        document.getElementById("player").style.display = 'block'; 
+        document.getElementById("ts3limatVedio1").classList.remove("d-none")
+        document.getElementById("secondVideoContainer").style.display = 'none';
+  
+})
+
+    document.getElementById("befor4").addEventListener("click" , function () {
+        document.getElementById("secondVideoContainer").style.display = 'block';
+        document.getElementById("next2").style.display = 'block'; 
+  document.getElementById("v4VideoContainer").style.display = 'none'; 
+})
+
+document.getElementById("befor5").addEventListener("click" , function () {
+        document.getElementById("v4VideoContainer").style.display = 'block';
+        document.getElementById("next4").style.display = 'block'; 
+  document.getElementById("v5VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor6").addEventListener("click" , function () {
+        document.getElementById("v5VideoContainer").style.display = 'block';
+        document.getElementById("next5").style.display = 'block'; 
+  document.getElementById("v6VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor7").addEventListener("click" , function () {
+        document.getElementById("v6VideoContainer").style.display = 'block';
+        document.getElementById("next6").style.display = 'block'; 
+  document.getElementById("v7VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor8").addEventListener("click" , function () {
+        document.getElementById("v7VideoContainer").style.display = 'block';
+        document.getElementById("next7").style.display = 'block'; 
+  document.getElementById("v8VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor9").addEventListener("click" , function () {
+        document.getElementById("v8VideoContainer").style.display = 'block';
+        document.getElementById("next8").style.display = 'block'; 
+  document.getElementById("v9VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor10").addEventListener("click" , function () {
+        document.getElementById("v9VideoContainer").style.display = 'block';
+        document.getElementById("next9").style.display = 'block'; 
+  document.getElementById("v10VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor11").addEventListener("click" , function () {
+        document.getElementById("v10VideoContainer").style.display = 'block';
+        document.getElementById("next10").style.display = 'block'; 
+  document.getElementById("v11VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor12").addEventListener("click" , function () {
+        document.getElementById("v11VideoContainer").style.display = 'block';
+        document.getElementById("next11").style.display = 'block'; 
+  document.getElementById("v12VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor13").addEventListener("click" , function () {
+        document.getElementById("v12VideoContainer").style.display = 'block';
+        document.getElementById("next12").style.display = 'block'; 
+  document.getElementById("v13VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor14").addEventListener("click" , function () {
+        document.getElementById("v13VideoContainer").style.display = 'block';
+        document.getElementById("next13").style.display = 'block'; 
+  document.getElementById("v14VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor15").addEventListener("click" , function () {
+        document.getElementById("v14VideoContainer").style.display = 'block';
+        document.getElementById("next14").style.display = 'block'; 
+  document.getElementById("v15VideoContainer").style.display = 'none';  
+})
+
+document.getElementById("befor16").addEventListener("click" , function () {
+        document.getElementById("v15VideoContainer").style.display = 'block';
+        document.getElementById("next15").style.display = 'block'; 
+  document.getElementById("v16VideoContainer").style.display = 'none';  
+})
+</script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{%load static%}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+
+{% block content %}
+<div class="container pt-3 pb-5 mb-5">
+  <section class="rtl text-center mt-5" id="goals">
+    <h2 class="background-color-nav fw-bolder h2Header mb-5">مرحبًا بك في الموديول الاول</h2>
+      <div class=" model my-4 py-4">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6 wow  animate__animated animate__fadeInUp ">
+            <div>
+              <h6 ><span class="main-color fw-bold">الهدف الرئيس الأول  :</span> الإلمام بالمفاهيم الأساسية للثقافة البصرية وتصميم الإنفوجرافيك التعليمي, ويتفرع منه الأهداف الإجرائية التالية: </h6>
+              <h6>مع نهاية دراسة هذا المحتوى, من المتوقع أن يكون الطالب المعلم قادرًا على أن: </h6>
+              <address class="serviceFooter" style="text-align: right;">
+                <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> يُعرّف الثقافة البصرية</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>يستنتج أهمية الثقافة البصرية</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يُلخص خصائص الثقافة البصرية</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يستنبط أهداف الثقافة البصرية</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يحدد مجالات الثقافة البصرية</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يحلل عناصر الثقافة البصرية</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	يحلل مهارات الثقافة البصرية</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يُعرِّف الإنفوجرافيك التعليمي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يحلل عناصر الإنفوجرافيك التعليمي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> يقارن بين الإنفوجرافيك التعليمي والمفاهيم المرتبطة به</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يستخلص خصائص الإنفوجرافيك التعليمي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> يحلل مزايا الإنفوجرافيك التعليمي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يقارن بين الإنفوجرافيك الثابت والمتحرك والتفاعلي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	يستخلص بعض معايير تصميم الإنفوجرافيك التعليمي </p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>	يذكر أمثلة لبرمجيات تصميم الإنفوجرافيك التعليمي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يُسمي بعض مواقع تصميم الإنفوجرافيك التعليمي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يُلخص خطوات تصميم الإنفوجرافيك التعليمي</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يستنبط مميزات تصميم الإنفوجرافيك بتقنيات الذكاء الاصطناعي	</p>
+                <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	يذكر بعض أدوات تصميم الإنفوجرافيك بتقنيات الذكاء الاصطناعي	</p>
+                
+
+
+              </address>
+            </div>
+          </div>
+          <div class="col-md-5 wow animate__animated animate__zoomIn">
+            <div class="text-start">
+              <img src="{%static 'img/31.jpg'%}" alt="" class="w-100 d-block mb-4 rounded-3">
+              <a class="goExam ms-auto mt-3" href="{% url 'quiz_question' quiz_name='module1tabsit' %}">الدخول الى الاختبار</a>
+              <a class="goExam ms-auto mt-3" href="{% url 'tabsit_module' module_number=1 %}">الدخول الى المحتوى</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+  </section>
+</div>
+{% endblock %}

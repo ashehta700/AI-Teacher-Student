@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError, ImproperlyConfigured
 from django.core.validators import MaxValueValidator, validate_comma_separated_integer_list
 from django.utils.timezone import now
 from django.conf import settings
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 from model_utils.managers import InheritanceManager
 from django.db.models.signals import pre_save, post_save
 import io
@@ -525,10 +525,10 @@ class Question(models.Model):
                                  blank=True,
                                  null=True, on_delete=models.CASCADE)
 
-    figure = models.ImageField(upload_to='uploads/%Y/%m/%d',
-                               blank=True,
-                               null=True,
-                               verbose_name=_("Figure"))
+    figure = models.ImageField(upload_to='%Y/%m/%d',
+        blank=True,
+        null=True,
+        verbose_name=_("Figure"))
 
     content = models.CharField(max_length=1000,
                                blank=False,
@@ -640,3 +640,16 @@ def csv_upload_post_save(sender, instance, created, *args, **kwargs):
 post_save.connect(csv_upload_post_save, sender=CSVUpload)
 
 
+
+
+# ==============================
+#  this for messages 
+
+class Message(models.Model):
+    send_from = models.ForeignKey(User, related_name='sent_messages', on_delete=models.CASCADE)
+    send_to = models.ManyToManyField(User, related_name='received_messages')
+    subject = models.CharField(max_length=255)
+    body = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    read_by = models.ManyToManyField(User, related_name='read_messages', blank=True)
+    readed_at = models.DateTimeField(null=True, blank=True)

@@ -1,0 +1,828 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+{%load static%}
+
+{% block content %}
+<!-- =======================================vedio1-================================= -->
+<div class="mt-5 py-5" id="fristVideoContainer">
+    <h2 class="background-color-nav fw-bolder h2Header mb-5">مرحباً بك فى الموديول الثالث</h2>
+
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6  ">
+                <div id="player" claas="w-100 "></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next1" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio1">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> الإنفوجرافيك التفاعلي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6 class="main-color">تعريف الإنفوجرافيك التفاعلي <i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+
+                        <p>
+                            الانفوجرافيك التفاعلي هو نوع من أنواع الانفوجرافيك الذي يسمح للمستخدم بالتفاعل معه، وذلك من
+                            خلال استخدام عناصر تفاعلية مثل الرسوم المتحركة، والفيديو، وعلامات التبويب، والقوائم
+                            المنسدلة، والأدوات التفاعلية الأخرى. يهدف الانفوجرافيك التفاعلي إلى جعل المعلومات أكثر
+                            تشويقًا وسهولة الفهم، وذلك من خلال السماح للمستخدم باكتشاف المعلومات بنفسه
+                        </p>
+                        <br>
+                        <h6 class="main-color">استخدامات الإنفوجرافيك التفاعلي<i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+
+                        <p>:تتعدد استخدامات الإنفوجرافيك التفاعلي ، ومن أبرزها</p>
+                        <p> التعليم <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                        <p> التسويق <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                        <p> التعلم والتعليم <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                        <p> التواصل <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                        <p> التكنولوجيا <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                        <p> يُستخدم الإنفوجرافيك التفاعلي في مجموعة متنوعة من المجالات، بما في ذلك التعليم، والصحة،
+                            والأعمال، وعلوم البيانات، والإعلام، والعديد من المجالات الأخرى. يمكن أن يكون الهدف منه توجيه
+                            المشاهدين إلى فهم أفضل للمعلومات المعروضة أو جعل البيانات المعقدة أكثر إيضاحًا وسهولة فهمًا
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =======================================vedio2-================================= -->
+<div class="mt-5 py-5" id="secondVideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="secondPlayer" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next2" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor2"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio1">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> إنشاء إنفوجرافيك تفاعلي
+                        باستخدام موقع Canva </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h5 class="main-color fw-bold"> :تسجيل الدخول </h5>
+                        <p> الدخول للرابط https://www.canva.com/<i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                        <p> النقر بالماوس على Sign upأقصى يمين الشاشة <i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                        <p> يكتب الايميل الشخصي على Gmail <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>
+                        </p>
+                        <br>
+                        <h5 class="main-color fw-bold  "> إنشاء إنفوجرافيك تفاعلي جديد باستخدام موقعCanva </h5>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة file أعلى الشاشة </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار Create new design </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>   اختيار أيقونة Video  </p>
+
+                        <br>
+                        <h5 class="main-color fw-bold rtl"> إضافة اسم للإنفوجرافيك التفاعلي: </h5>
+
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النقر بالماوس على أيقونة Untitled design   </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	كتابة اسم الإنفوجرافيك التفاعلي باستخدام لوحة المفاتيح  </p>
+               
+                        <br>
+                        <h5 class="main-color fw-bold rtl">    إدراج صفحة جديدة: </h5>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  	النقر بالماوس على أيقونة +Add page أسفل الشاشة  </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =======================================vedio4-================================= -->
+<div class="mt-5 py-5" id="v4VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v4Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next4" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor4"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio4">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> تغيير الخلفية في موقع Canva </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                      
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Background على يسار الشاشة</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النقر بالماوس على الصورة المناسبة لاختيارها </p>
+
+                        
+                      
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio5=========================== -->
+<div class="mt-5 py-5" id="v5VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0 ">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v5Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next5" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor5"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio5">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> 
+                        إضافة الأشكال للإنفوجرافيك التفاعلي  </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                 
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Elements على يسار الشاشة </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار الشكل المطلوب بالنقر بالماوس عليه بالماوس</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تنسيق الشكل باستخدام الأدوات أعلى الشاشة </p>
+
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio6=========================== -->
+<div class="mt-5 py-5" id="v6VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v6Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next6" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor6"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio6">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> 
+                      تابع إضافة الأشكال للإنفوجرافيك التفاعلي  </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                 
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>فتح قائمة Elements على يسار الشاشة </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار الشكل المطلوب بالنقر بالماوس عليه بالماوس</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تنسيق الشكل باستخدام الأدوات أعلى الشاشة </p>
+
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio7=========================== -->
+<div class="mt-5 py-5" id="v7VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v7Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next7" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor7"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio7">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> الرسم الحر في موقع Canva </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  فتح قائمة draw على يسار الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  الرسم باستخدام الأقلام من القائمة الجانبية  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  المسح باستخدام الممحاة من القائمة الجانبية  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  تغيير اللون باستخدام أيقونة color  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  تحديد حجم الخط من خلال قائمة .settings    </p>
+                    </address>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio8=========================== -->
+<div class="mt-5 py-5" id="v8VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v8Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next8" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor8"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio8">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span>  إضافة الرسوم البيانية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Elements على يسار الشاشة</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار الشكل البياني المناسب من تبويب Charts</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> تنسيق الشكل البياني باستخدام الأدوات أعلى الشاشة</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio9=========================== -->
+<div class="mt-5 py-5" id="v9VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v9Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next9" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor9"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio9">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span>  إضافةالجداول</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Elements على يسار الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  اختيار الجدول المناسب من تبويب Tables </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  تنسيق الجدول باستخدام الأدوات أعلى الشاشة </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio10=========================== -->
+<div class="mt-5 py-5" id="v10VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v10Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next10" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor10"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio10">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> إضافة الصور </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <!-- <h5 class="main-color fw-bold"> : تغيير الخلفية </h5> -->
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة uploads على يسار الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة images من القائمة الجانبية على يسار الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة upload files  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار الصورة المناسبة من جهاز الكمبيوتر  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النقر بالماوس على أيقونة .open </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار الصورة من القائمة الجانبية باستخدام الماوس  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> تنسيق الصورة باستخدام الأدوات أعلى الشاشة  </p>
+                        <br>
+
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio11=========================== -->
+<div class="mt-5 py-5" id="v11VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v11Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next11" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor11"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio11">
+                <div class="text-end">
+                    <h5 class="pb-2 rtl"> <span class="main-color"> الموديول الثالث: </span> إضافة صور بالذكاء الاصطناعي  </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  فتح قائمة apps على يسار الشاشة</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار .Text to image  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> إضافة وصف الصورة </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على .Create your image </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio12=========================== -->
+<div class="mt-5 py-5" id="v12VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v12Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next12" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor12"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio12">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span>   إضافة الفيديو ومقاطع الصوت </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة uploads على يسار الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النقر بالماوس على أيقونة /Audio Videoمن القائمة الجانبية على يسار الشاشة </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النقر بالماوس على أيقونة upload files </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار مقطع الصوت أو الفيديو المناسب من جهاز الكمبيوتر   </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  النقر بالماوس على أيقونة open </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار مقطع الصوت من القائمة الجانبية باستخدام الماوس  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  تنسيق المقطع الصوتي باستخدام الأدوات أعلى الشاشة </p>
+
+                    </address>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio13=========================== -->
+<div class="mt-5 py-5" id="v13VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v13Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next13" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor13"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio13">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span>  إضافة النصوص 
+                    </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة Text على يسار الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة .Add text box  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> استخدام لوحة المفاتيح لإضافة النص  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  تنسيق النص باستخدام الأدوات أعلى الشاشة </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio14=========================== -->
+<div class="mt-5 py-5" id="v14VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v14Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next14" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                    <button class="back textDecoration py-2 backQuioz" id="befor14"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio14">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span>   إضافة النصوص بالذكاء الاصطناعي
+                    </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار مربع النص من خلال النقر بالماوس عليه   </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على canva assisstant أسفل يمين الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار Magic write   </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  كتابة الكلمات الأساسية للموضوع </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  الضغط على Enter من لوحة المفاتيح </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار مربع النص من خلال النقر بالماوس عليه  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على canva assisstant أسفل يمين الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  اختيار Summarize أو Expand </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio15========================== -->
+<div class="mt-5 py-5" id="v15VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v15Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next15" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                            <button class="back textDecoration py-2 backQuioz" id="befor15"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio15">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> :إضافة حركة للكائنات
+                </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على العنصر بالماوس لتحديده </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	النقر بالماوس على animate أعلى الشاشة </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار الحركة المناسبة </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio16========================== -->
+<div class="mt-5 py-5" id="v16VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v16Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next16" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                            <button class="back textDecoration py-2 backQuioz" id="befor16"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio16">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> :إضافة أدوات التفاعل 
+                </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> الدخول على موقع type form</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تصميم الأسئلة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على apps من الجانب الأيسر للشاشة في الإنفوجرافيك التفاعلي </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار type form من تبويب import your media </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار السؤال الذي تم تصميمه باستخدام type form  </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio17========================== -->
+<div class="mt-5 py-5" id="v17VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v17Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next17" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                            <button class="back textDecoration py-2 backQuioz" id="befor17"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio17">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> :تابع إضافة أدوات التفاعل 
+                </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> الدخول على موقع type form</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تصميم الأسئلة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على apps من الجانب الأيسر للشاشة في الإنفوجرافيك التفاعلي </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار type form من تبويب import your media </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار السؤال الذي تم تصميمه باستخدام type form  </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio18========================== -->
+<div class="mt-5 py-5" id="v18VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v18Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next18" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                            <button class="back textDecoration py-2 backQuioz" id="befor18"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio18">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> :إضافة تعليق ورابط ونص بديل
+                </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	إضافة تعليق بالنقر بالماوس بالزر الأيمن للفأرة في مكان فارغ واختيار comment </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  كتابة التعليق </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> إضافة رابط بالنقر بالماوس بالزر الأيمن للفأرة واختيار Link  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  إضافة نص بديل بالنقر بالماوس بالزر الأيمن للفأرة واختيار Alternative text  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> إضافة النص باستخدام لوحة المفاتيح  </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio19========================== -->
+<div class="mt-5 py-5" id="v19VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v19Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next19" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                            <button class="back textDecoration py-2 backQuioz" id="befor19"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio19">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> :التعديل في قالب جاهز 
+                </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	النقر بالماوس على Templates من الصفحة الرئيسية للموقع يتم على يسار الشاشة </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار التصميم المناسب</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على .Customize this template  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  التعديل في التصميم  </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio20========================== -->
+<div class="mt-5 py-5" id="v20VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v20Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next20" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                            <button class="back textDecoration py-2 backQuioz" id="befor20"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio20">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> :إضافة مشاركين للإنفوجرافيك التفاعلي 
+                </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة Share أقصى يمين الشاشة	</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>تغيير إعدادات المشاركة في تبويب  Collaboration link إلى .Anyone with the Link…. Can edit </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  نسخ الرابط من خلال النقر بالماوس على .Copy Link  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  مشاركته مع الأشخاص المشاركين </p>
+<br>
+<h5 class="main-color fw-bold"> مشاركة الإنفوجرافيك التفاعلي</h5>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>النقر بالماوس على أيقونة Share أقصى يمين الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة copy link أو تحديد إعدادات المشاركة  </p>
+                 
+                        <br>
+                        <h5 class="main-color fw-bold">  معاينة الإنفوجرافيك </h5>
+                  <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة Share أقصى يمين الشاشة </p>
+                  <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> 	النقر بالماوس على زر Present </p>
+                  <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار نمط العرض </p>
+                  <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على Present </p>
+                         
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio21========================== -->
+<div class="mt-5 py-5" id="v21VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="v21Player" class="w-100 animate__animated animate__zoomIn"></div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn  px-4 mb-4 mt-4" id="next21" disabled> التالي <i
+                            class="fa-solid fa-paper-plane"></i></button>
+
+                            <button class="back textDecoration py-2 backQuioz" id="befor21"> السابق <i
+                            class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio21">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الثالث: </span> :نسخ و تنزيل الإنفوجرافيك
+                </h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> فتح قائمة file أعلى الشاشة</p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>اختيار make a copy  </p>
+
+<br>
+<h5 class="main-color fw-bold">  تنزيل الإنفوجرافيك </h5>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على أيقونة Share أقصى يمين الشاشة  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> اختيار أيقونة download  </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>  اختيار التنسيق المناسب </p>
+                        <p class="rtl"> <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> النقر بالماوس على download  </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ====================================================activity======================================== -->
+<div class="mt-5 py-5" id="activity" style="display: none;">
+    <div class="container">
+
+
+        <div class="text-end">
+            <h5 class="p-2">: نشاط (3) </h5>
+            <h3 class="text-center my-5 py-5"> قم بانشاء إنفوجرافيك تفاعلي من خلال موقع ثم قم بإرسال الرابط من خلال بيئة التعلم Canva  </h3>
+            <h3 class="text-center my-5 py-5"> </h3>
+            <button class="btn  px-4 mb-4 mt-4 d-flex" id="finish"> التالي <i
+                    class="fa-solid fa-paper-plane"></i></button>
+
+        </div>
+
+    </div>
+</div>
+<!-- ======================================================== -->
+<div class="mt-5 py-5" id="test" style="display: none;">
+    <div class="container">
+
+
+        <div class="text-center d-flex flex-column align-items-center">
+            <h2 class="main-color"> أحسنت </h2>
+            <iframe src="https://giphy.com/embed/7ATh0I7hi5OWyd66XE" width="480" height="480"></iframe>
+            <a id="quiz_question" class="btn px-4 mx-2 mb-2 "
+                href="{% url 'quiz_question' quiz_name='aftermodule3tabsit'%}">الاختبار البعدى للموديل الثالث </a>
+        </div>
+
+    </div>
+</div>
+<!-- =======================================last-================================ -->
+
+
+<script src="{% static 'js/vedios3.js' %}"></script>
+<script>
+
+    document.getElementById("befor2").addEventListener("click", function () {
+        document.getElementById("fristVideoContainer").style.display = 'block';
+        document.getElementById("next1").style.display = 'block';
+        document.getElementById("player").style.display = 'block';
+        document.getElementById("ts3limatVedio1").classList.remove("d-none")
+        document.getElementById("secondVideoContainer").style.display = 'none';
+
+    })
+
+    document.getElementById("befor4").addEventListener("click", function () {
+        document.getElementById("secondVideoContainer").style.display = 'block';
+        document.getElementById("next2").style.display = 'block';
+        document.getElementById("v4VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor5").addEventListener("click", function () {
+        document.getElementById("v4VideoContainer").style.display = 'block';
+        document.getElementById("next4").style.display = 'block';
+        document.getElementById("v5VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor6").addEventListener("click", function () {
+        document.getElementById("v5VideoContainer").style.display = 'block';
+        document.getElementById("next5").style.display = 'block';
+        document.getElementById("v6VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor7").addEventListener("click", function () {
+        document.getElementById("v6VideoContainer").style.display = 'block';
+        document.getElementById("next6").style.display = 'block';
+        document.getElementById("v7VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor8").addEventListener("click", function () {
+        document.getElementById("v7VideoContainer").style.display = 'block';
+        document.getElementById("next7").style.display = 'block';
+        document.getElementById("v8VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor9").addEventListener("click", function () {
+        document.getElementById("v8VideoContainer").style.display = 'block';
+        document.getElementById("next8").style.display = 'block';
+        document.getElementById("v9VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor10").addEventListener("click", function () {
+        document.getElementById("v9VideoContainer").style.display = 'block';
+        document.getElementById("next9").style.display = 'block';
+        document.getElementById("v10VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor11").addEventListener("click", function () {
+        document.getElementById("v10VideoContainer").style.display = 'block';
+        document.getElementById("next10").style.display = 'block';
+        document.getElementById("v11VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor12").addEventListener("click", function () {
+        document.getElementById("v11VideoContainer").style.display = 'block';
+        document.getElementById("next11").style.display = 'block';
+        document.getElementById("v12VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor13").addEventListener("click", function () {
+        document.getElementById("v12VideoContainer").style.display = 'block';
+        document.getElementById("next12").style.display = 'block';
+        document.getElementById("v13VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor14").addEventListener("click", function () {
+        document.getElementById("v13VideoContainer").style.display = 'block';
+        document.getElementById("next13").style.display = 'block';
+        document.getElementById("v14VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor15").addEventListener("click", function () {
+        document.getElementById("v14VideoContainer").style.display = 'block';
+        document.getElementById("next14").style.display = 'block';
+        document.getElementById("v15VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor16").addEventListener("click", function () {
+        document.getElementById("v15VideoContainer").style.display = 'block';
+        document.getElementById("next15").style.display = 'block';
+        document.getElementById("v16VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor17").addEventListener("click", function () {
+        document.getElementById("v16VideoContainer").style.display = 'block';
+        document.getElementById("next16").style.display = 'block';
+        document.getElementById("v17VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor18").addEventListener("click", function () {
+        document.getElementById("v17VideoContainer").style.display = 'block';
+        document.getElementById("next17").style.display = 'block';
+        document.getElementById("v18VideoContainer").style.display = 'none';
+    })
+
+    document.getElementById("befor19").addEventListener("click", function () {
+        document.getElementById("v18VideoContainer").style.display = 'block';
+        document.getElementById("next18").style.display = 'block';
+        document.getElementById("v19VideoContainer").style.display = 'none';
+    })
+    document.getElementById("befor20").addEventListener("click", function () {
+        document.getElementById("v19VideoContainer").style.display = 'block';
+        document.getElementById("next19").style.display = 'block';
+        document.getElementById("v20VideoContainer").style.display = 'none';
+    })
+    document.getElementById("befor21").addEventListener("click", function () {
+        document.getElementById("v20VideoContainer").style.display = 'block';
+        document.getElementById("next20").style.display = 'block';
+        document.getElementById("v21VideoContainer").style.display = 'none';
+    })
+</script>
+
+<!-- <a href="{% url 'quiz_question' quiz_name='aftermodule3tabsit'%}">الاختبار البعدى للموديل الثانى</a> -->
+{% endblock %}

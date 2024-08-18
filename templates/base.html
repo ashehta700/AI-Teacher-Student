@@ -1,0 +1,428 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>{% trans "بيئة التعليم الذكية" %} | {% block title %}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}">
+
+  <!-- styles -->
+  <!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/toastr.css' %}">
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<style>
+  iframe#bp-web-widget {
+    left: 0;
+    height: 76% !important;
+    top: 153px;
+}
+</style>
+</head>
+
+<body>
+
+
+
+
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      {% if user.is_authenticated %}
+   
+      <a  style="color: white;" class="navbar-brand fs-6 fw-bold" href="{% url 'logout' %}" >مرحبــــأً بك    {{user.first_name}} {{user.last_name}} | تسجيل الخروج   
+        </a>
+
+    <!-- Inbox Icon with Message Count -->
+    {% if request.path == '/index/' %}
+          <button class="navbar-brand btn btn-primary" data-toggle="modal" data-target="#inboxModal">
+            <i class="fas fa-inbox"></i> 
+            <span class="badge badge-danger">{{received_messages.count}}</span> <!-- Adjust the count as needed -->
+          </button>
+ 
+          {% endif %}
+
+      {% endif %}
+
+<!-- Inbox Modal -->
+<div dir="rtl" class="modal fade" id="inboxModal" tabindex="-1" role="dialog" aria-labelledby="inboxModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="inboxModalLabel">صندوق الرسائـل</h5>
+        <button type="button" class="close ml-0 "style="color:red" data-dismiss="modal" aria-label="Close" >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- List of Messages -->
+        
+        {% for message in received_messages|dictsort:"created_at" %}
+        <div class="message-container bg-light" data-message-id="{{ message.id }}">
+          <button style="text-decoration: none; color:#006917" class="btn btn-link message-subject-btn">
+            <h5 class="mb-0">{{message.idx }} - {{ message.subject }} <i class="fa-solid fa-chevron-down mr-3"></i></h5>
+            <span class="text-muted"></span>
+          </button>
+          <div class="message-details bg-light p-3 mt-2" style="display: none; border: 1px solid #ddd; border-radius: 5px;">
+            <p><strong>{{ message.body }}</strong></p>
+            <hr class="my-2">
+            <p class="mb-1 small "> تم الارسال بواسطة: {{ message.send_from.username }}</p>
+            <p class="mb-1 small">تاريخ ارسال الرسالة: {{ message.created_at }}</p>
+            {% if user in message.read_by.all %}
+              <p class="mb-1 small">تمت القراءة بتاريخ: {{ message.readed_at }}</p>
+            {% endif %}
+            
+            
+          </div>
+        </div>
+        <hr>
+        {% endfor %}
+<!-- List of Messages -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Message Details Modal -->
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center ">
+              {% if user.username == 'admin' %}
+              <li class="nav-item pe-2 ">
+              <a  style="color: white;" class="navbar-brand fs-6 fw-bold" href="{% url 'quiz_marking' %}" >log
+              </a>
+            </li>
+              {% endif %}
+              <li class="nav-item pe-2">
+                <a class="nav-link text-white fw-bold" href="/measuretest/take/"> ابدأ التعلم </a>
+                </li>
+              <li class="nav-item pe-2">
+
+                {% if request.session.taken_exam %}
+                    {% if request.session.passed_exam %}
+                        <div class="submenu dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="taqidMenu" data-bs-toggle="dropdown" aria-expanded="false">الموديولات</a>
+                            <ul class="dropdown-menu" aria-labelledby="taqidMenu">
+                                <li><a class="dropdown-item" href="{% url 'taqid_module' module_number=1 %}">الموديول الاول</a></li>
+                                <li><a class="dropdown-item" href="{% url 'taqid_module' module_number=2 %}">الموديول الثانى</a></li>
+                                <li><a class="dropdown-item" href="{% url 'taqid_module' module_number=3 %}">الموديول الثالث</a></li>
+                            </ul>
+                        </div>
+                    {% else %}
+                        <div class="submenu dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="tabsitMenu" data-bs-toggle="dropdown" aria-expanded="false">الموديولات</a>
+                            <ul class="dropdown-menu" aria-labelledby="tabsitMenu">
+                                <li><a class="dropdown-item" href="{% url 'tabsit_module' module_number=1 %}">الموديول الاول</a></li>
+                                <li><a class="dropdown-item" href="{% url 'tabsit_module' module_number=2 %}">الموديول الثانى</a></li>
+                                <li><a class="dropdown-item" href="{% url 'tabsit_module' module_number=3 %}">الموديول الثالث</a></li>
+                            </ul>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </li>
+            
+            </li>
+            
+                <li class="nav-item pe-2 ">
+                    <a class="nav-link text-white fw-bold" href="#shar"> أدوات الدردشة</a>
+                </li>
+                <li class="nav-item pe-2 ">
+                    <a class="nav-link text-white fw-bold" href="#msater"> مصادر إثرائية</a>
+                </li>
+                <li class="nav-item pe-2 ">
+                  <a class="nav-link text-white fw-bold" href="#ta3limm"> أدوات التعلم الذكي</a>
+                </li>
+              <li class="nav-item pe-2 ">
+                    <a class="nav-link text-white fw-bold" href="#rols">تعليمات البيئة</a>
+                </li>
+                <li class="nav-item pe-2 ">
+                    <a class="nav-link text-white fw-bold" href="#goals">أهداف البيئة</a>
+                </li>
+             
+                <li class="nav-item">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <img src="{% static "img/2.png" %}" alt="" width="90" height="70" class="me-2">
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+
+    </div>
+</nav>
+
+
+
+    
+    {% block content %}
+    {% endblock %}
+    {% if messages %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script>
+      // Initialize Toastr
+      $(document).ready(function() {
+      toastr.options = {
+        positionClass: 'toast-top-right-20', // Set the position here
+        direction:'rtl',
+        progressBar: true, // Show a progress bar
+        timeOut: 3000, // Duration for which the notification will be displayed
+        extendedTimeOut: 1000 // Additional time to display after mouse hover
+      };
+  
+      {% for message in messages %}
+          toastr.success('{{ message }}'); // Or use toastr.error, toastr.info, etc. based on message level
+        {% endfor %}
+      });
+    </script>
+    {% endif %}
+    
+  {% comment %} </div> {% endcomment %}
+
+
+
+
+  {% comment %} footer  {% endcomment %}
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div style="background-color: #1c2331;" >
+  <div class="container-fluid pt-1">
+
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white  myFooter"
+            style="background-color: #1c2331"
+            >
+
+  
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+
+  
+                       <!-- Grid column -->
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-end fw-bold"> تواصل مع الباحثة  </h6>
+              <hr
+                  class=" "
+                  style="width: 80px; background-color: #7c4dff; height: 2px"
+                  />
+                  <address class="serviceFooter" style="text-align: right;">
+                    <p><i class="fa fa-phone yell-color"></i>  01002393683</p>
+                    <p><i class="fa fa-envelope yell-color"></i>  hewidasaad@gmail.com</p>
+                    <p><i class="fa-solid fa-paper-plane yell-color"></i>  D_h_saad@edu.dmu.edu.eg</p>
+                  </address>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4 mx-0 text-end">
+              <!-- Links -->
+              <h6 class="text-end fw-bold"> التواصل الاجتماعي </h6>
+              <hr
+                  class=" "
+                  style="width: 100px; background-color: #7c4dff; height: 2px"
+                  />
+                  <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="https://www.facebook.com/hewida.saad.9" role="button">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="https://www.linkedin.com/in/hewida-saad-a4881695" role="button">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a class="btn btn-primary btn-floating m-1" style="background-color: #2598d6" href="https://scholar.google.com/citations?user=OYmW0PYAAAAJ&hl=ar" role="button">
+                    <i class="fa-brands fa-google"></i>
+                  </a>
+                  <a class="btn btn-primary btn-floating m-1" style="background-color: #006917" href="https://wa.me/201002393683?text=Your%20Message%20Here" role="button">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                
+                
+                  <a class="btn btn-primary btn-floating m-1" style="background-color: #727272" href="mailto:hewidasaad@gmail.com" role="button">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+              </p>
+          </div>
+          
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-end fw-bold"> المعرض </h6>
+              <hr
+                  class=" "
+                  style="width: 50px; background-color: #7c4dff; height: 2px"
+                  />
+                  <div class="row">
+                    <img src="{% static "img/16.JPG" %}" alt="" class="w-50 rounded-2" >
+                    <img src="{% static "img/13.JPG" %}" alt="" class="w-50 rounded-2" >
+
+                    <img src="{% static "img/14.JPG" %}" alt="" class="w-50 rounded-2 mt-3" >
+                    <img src="{% static "img/15.JPG" %}" alt="" class="w-50 rounded-2 mt-3" >
+                  </div>
+            </div>
+            <!-- Grid column -->
+  
+       
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+
+        <p class="text-white" href="https://mdbootstrap.com/"
+        >جميع الحقوق محفوظة للباحثة © 2024</p
+          >
+      </div>  
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  
+  </div>
+</div>
+<!-- End of .container -->
+
+
+
+
+
+
+
+
+  <!-- After the quiz content -->
+
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/wow.js' %}"></script>
+  <script src="{% static 'js/toastr.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="{% static 'js/vedios.js' %}"></script>
+  
+<script>
+  $(window).on('load', function(){
+      // Hide the alert after 5 seconds (5000 milliseconds)
+      setTimeout(function(){
+        $(".alert").css('display', 'none');
+      }, 3000);
+    });
+
+    
+</script>
+
+<script>
+  function enableSubmitButtonstart() {
+    submitButtonStart.removeAttribute("disabled");
+  }
+
+  function disableSubmitButtonstart() {
+      submitButtonStart.setAttribute("disabled", "disabled");
+  }
+
+  const trueRadioButtonStart = document.getElementById("start");
+  const submitButtonStart = document.getElementById("btnForm");
+
+  // Enable the submit button when checked
+  trueRadioButtonStart.addEventListener("change", function() {
+      if (trueRadioButtonStart.checked) {
+          enableSubmitButtonstart();
+      } else {
+          disableSubmitButtonstart();
+      }
+  });
+
+
+
+</script>
+{% comment %} this is for message  {% endcomment %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- jQuery for AJAX handling -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function() {
+      // Click event for marking message as read and toggling details visibility
+      $('.message-subject-btn').on('click', function() {
+          var messageContainer = $(this).closest('.message-container');
+          var messageId = messageContainer.data('message-id');
+  
+          // Toggle visibility of message details
+          messageContainer.find('.message-details').toggle();
+  
+          // Check if the message is not yet marked as read
+          if (!messageContainer.find('.mark-as-read-btn').hasClass('disabled')) {
+              // Send mark as read request
+              $.ajax({
+                  type: 'POST',
+                  url: '{% url "mark_as_read" 0 %}'.replace('0', messageId),
+                  data: {
+                      csrfmiddlewaretoken: '{{ csrf_token }}',
+                  },
+                  success: function(data) {
+                      // Update the UI to show that the message has been marked as read
+                      messageContainer.find('.mark-as-read-btn').addClass('disabled');
+                      messageContainer.find('.mark-as-read-btn').prop('disabled', true);
+                      {% comment %} messageContainer.append('<p>Read at: ' + data.readed_at + '</p>'); {% endcomment %}
+                  },
+                  error: function(error) {
+                      console.error('Error marking message as read:', error);
+                  }
+              });
+          }
+      });
+  });
+  </script>
+
+  <script>
+    window.botpressWebChat.init({
+        "composerPlaceholder": "التحدث مع الذطاء الاصطناعى",
+        "botConversationDescription": "يستخدم هذا الذكاء الاصطناعى لمساعدتك فى بيئة التعلم الذكية",
+        "botId": "846d0eb2-ee86-4b3a-b723-35529d42b927",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "846d0eb2-ee86-4b3a-b723-35529d42b927",
+        "webhookId": "e71b1e6d-6cd3-4a0d-8f84-658add069034",
+        "lazySocket": true,
+        "themeName": "prism",
+        "frontendVersion": "v1",
+        "theme": "prism",
+        "themeColor": "#2563eb"
+    });
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/c89fcefb-2e2b-4fce-867e-0f11aefe76d1/webchat/config.js" defer></script>
+    
+  </script>
+
+
+</body>
+
+</html>

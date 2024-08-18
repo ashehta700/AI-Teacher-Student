@@ -4,8 +4,8 @@ from django.contrib.admin.widgets import FilteredSelectMultiple
 # Register your models here.
 from .models import Quiz, Category, Question, Progress
 from mcq.models import MCQQuestion, Answer
-from django.utils.translation import ugettext_lazy as _
-from .models import CSVUpload
+from django.utils.translation import gettext as _
+from .models import CSVUpload,Message,Sitting
 
 
 class CSVUploadsAdmin(admin.ModelAdmin):
@@ -87,3 +87,17 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(MCQQuestion, MCQuestionAdmin)
 admin.site.register(Progress, ProgressAdmin)
 admin.site.register(CSVUpload, CSVUploadsAdmin)
+
+
+
+class MessageAdminForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+class MessageAdmin(admin.ModelAdmin):
+    form = MessageAdminForm
+    list_display = ['send_from', 'subject', 'created_at']
+
+admin.site.register(Message, MessageAdmin)
+admin.site.register(Sitting)

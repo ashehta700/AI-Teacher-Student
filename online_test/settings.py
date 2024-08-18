@@ -56,7 +56,7 @@ ROOT_URLCONF = 'online_test.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,7 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Kolkata'
+TIME_ZONE = 'Africa/Cairo'
+
 
 USE_I18N = True
 
@@ -124,3 +125,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+MEDIA_URL = '/uploads/'  # URL prefix for media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')  # Absolute filesystem path to the directory that will hold user-uploaded files.

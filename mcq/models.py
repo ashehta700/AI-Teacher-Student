@@ -13,6 +13,7 @@ class MCQQuestion(Question):
     answer_order = models.CharField(
         max_length=30, null=True, blank=True,
         choices=ANSWER_ORDER_OPTIONS,
+        default='none',  # Set a default value
         help_text="The order in which multichoice \
                     answer options are displayed \
                     to the user",
@@ -29,10 +30,10 @@ class MCQQuestion(Question):
     def order_answers(self, queryset):
         if self.answer_order == 'content':
             return queryset.order_by('content')
-        # if self.answer_order == 'random':
-        #     return queryset.order_by('Random')
-        if self.answer_order == 'none':
-            return queryset.order_by('None')
+        elif self.answer_order == 'none' or self.answer_order is None:
+            return queryset.order_by('id')  # Default to ordering by id
+        else:
+            raise ValueError("Invalid answer order: {}".format(self.answer_order))
 
     def get_answers(self):
         return self.order_answers(Answer.objects.filter(question=self))

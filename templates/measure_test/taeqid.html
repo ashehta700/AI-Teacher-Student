@@ -1,0 +1,64 @@
+
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+
+{% block content %}
+{% comment %} old details for quiz {% endcomment %}
+
+{% comment %} <h2>{{ quiz.title }}</h2>
+<h3>{% trans "Category" %}: {{ quiz.category }}</h3>
+{% if quiz.single_attempt %}
+  <h4>{% trans "You will only get one attempt at this quiz" %}.</h4>
+{% endif %}
+<p>{{ quiz.description }}</p>
+<p>
+  <a href="{% url 'quiz_question' quiz_name=quiz.url %}">
+	{% trans "Start quiz" %}
+  </a>
+</p> {% endcomment %}
+
+{% comment %} -------------------------- {% endcomment %}
+
+
+<section class="" id="SuggestedSources">
+
+  <div class="d-flex flex-column justify-content-center align-items-center w-100 vh-100">
+
+      <!-- q(1) -->
+      <div class="w-50 contentQuiz animate__animated animate__zoomIn" id="q">
+          <form id="form">
+              <h4 class="fw-bolder text-center pt-4"> تعليمات الاختبار القبلي الشامل لمحتوى التعقيد</h4>
+              <div class="text-end px-3  p-3 t3limat">
+                  <address class="serviceFooter" style="text-align: right;">
+
+                      <p> {{ quiz.description }}<i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </p>
+                  </address>
+                  <div class="text-end d-flex justify-content-end align-items-center numberQuestion">
+                      <p class="p-0 m-0">موافق</p> <input type="checkbox" name="" id="start" class="px-2 mx-1">
+                  </div>
+              </div>
+          </form>
+
+
+
+          <!-- <a href="{% url 'quiz_question' quiz_name='taqid'%}" class="btn btnQuiz px-4 mx-2 mb-2 " id="btnForm" disabled>بدء الاختبار القبلي الشامل  <i class="fa-solid fa-paper-plane"></i></a>
+          <a href="{% url 'index'  %}" class="back">الرجوع إلي الصفحة الرئيسية <i class="fa-solid fa-rotate-left"></i></a> -->
+
+
+          <div class="w-100 d-flex mb-3 ">
+
+
+            <button class="btn neext  mx-3 px-md-5 " id="btnForm" disabled ><a href="{% url 'quiz_question' quiz_name='taqid'%}">بدء الاختبار القبلي الشامل </a> <i class="fa-solid fa-paper-plane text-white"></i></button>
+        
+            <a  href="{% url 'index'  %}" class="back textDecoration">عودة للصفحة الرئيسية  <i class="fa-solid fa-rotate-left"></i></a>
+        
+        
+        </div>
+      </div>
+  </div>
+</section>
+
+{% endblock %}

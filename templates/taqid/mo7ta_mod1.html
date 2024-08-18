@@ -1,0 +1,849 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+{{ quiz.title }}
+{% endblock %}
+{%load static%}
+
+{% block content %}
+
+<div>
+    <div class="row m-0 p-0">
+
+        <div class="col-md-10">
+
+<!-- =======================================vedio1-================================= -->
+<div class="mt-5 py-5" id="fristVideoContainer">
+    <h2 class="background-color-nav fw-bolder h2Header mb-5">مرحباً بك فى الموديول الأول</h2>
+
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6  ">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/I3w9malmCyg" frameborder="0" allowfullscreen></iframe>
+                </div>
+      
+            </div>
+            <div class="col-md-6" id="ts3limatVedio1">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> تعريف الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p>الثقافة البصرية هي مجموعة القيم والمعتقدات والممارسات والتعابير التي ترتبط بالرؤية والوسائط
+                            البصرية. تعتبر الثقافة البصرية جزءًا من الثقافة العامة للمجتمع، وتتعلق بكيفية فهمنا وتفسيرنا
+                            للعالم من خلال المشاهدة والتصوير والتصميم.</p>
+                        <br>
+                        <p>تشمل الثقافة البصرية مجموعة واسعة من العناصر والمظاهر، بما في ذلك الفنون التشكيلية، والتصميم
+                            الجرافيكي، والتصوير الفوتوغرافي، والسينما، والإعلانات، والرسوم المتحركة، والرسوم الهزلية،
+                            والرموز، والشعارات، والأيقونات، والعلامات التجارية، والإعلام المرئي بشكل عام</p>
+                        <br>
+                        <p>وبالتالي, فالثقافة البصرية هي مجموعة من الكفايات المرتبطة بحاسة الابصار والتى يمكن تنميتها
+                            لدى المتعلم عن طريق الرؤية وعن طريق تعاملها ايضا مع خبرات مختلفة يتعامل معها المتعلم من خلال
+                            الحواس الاخرى وتعتبر عملية تنمية هذه الكفايات ضرورية للتعلم ،وعندما تنمى هذه الكفايات فانها
+                            تمكن المتعلم (المثقف بصريا) من ان يفهم ويفسر الاحداث البصرية والرموز البصرية والاشياء التى
+                            عادة ما يتعرض لها المتعلم فى البيئة التى يعيش فيها سواء كانت طبيعية ام من صنع الانسان نفسه
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =======================================vedio2-================================= -->
+<div class="mt-5 py-5" id="secondVideoContainer"   style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/c56vbCAi5PI" frameborder="0" allowfullscreen></iframe>
+                </div>
+>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio1">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span>خصائص الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p> <span class="main-color fw-bold">تعدد العناصر: </span>تتضمن الثقافة البصرية مجموعة واسعة من
+                            الوسائط والأشكال، بما في ذلك الرسم والتصوير والنحت والعمارة والتصميم والأفلام والتلفزيون
+                            والإعلان</p>
+                        <p> <span class="main-color fw-bold"> عالمية: </span>تنتشر الثقافة البصرية في جميع أنحاء العالم،
+                            وتشكل جزءًا مهمًا من الهوية الثقافية للمجتمعات المختلفة</p>
+                        <p> <span class="main-color fw-bold"> ديناميكية: </span> تتطور الثقافة البصرية باستمرار، مع ظهور
+                            أشكال جديدة من الفنون والوسائط كل يوم</p>
+                        <p> <span class="main-color fw-bold"> مؤثرة: </span> يمكن للصور أن تؤثر على أفكارنا ومشاعرنا
+                            وسلوكنا بشكل عميق</p>
+                        <p> <span class="main-color fw-bold"> تعددية الثقافة البصرية: </span> تتنوع الثقافة البصرية من
+                            ثقافة إلى أخرى، حيث تعكس الاختلافات الثقافية في القيم والعادات والتقاليد </p>
+                        <p> <span class="main-color fw-bold"> التجدد المستمر للثقافة البصرية: </span>تتطور الثقافة
+                            البصرية باستمرار، حيث تتغير الأشكال الفنية والتقنيات المستخدمة في إنشاء الصور والرسومات
+                            والأشكال الفنية الأخرى </p>
+                        <p> <span class="main-color fw-bold"> التأثير المتبادل للثقافة البصرية: </span>تتفاعل الثقافات
+                            البصرية مع بعضها البعض، مما يؤدي إلى ظهور أشكال فنية جديدة </p>
+                        <p> <span class="main-color fw-bold"> الاعتماد على البصر: </span> تعتمد الثقافة البصرية على
+                            البصر، حيث تعتمد على الأشكال والألوان والخطوط والأبعاد في نقل المعنى </p>
+                        <p> <span class="main-color fw-bold"> التعبير عن الأفكار والمشاعر : </span> تستخدم الثقافة
+                            البصرية للتعبير عن الأفكار والمشاعر، حيث يمكن استخدامها لرواية القصص والتعبير عن المشاعر
+                            والعواطف</p>
+                        <p> <span class="main-color fw-bold"> الإقناع والتأثير: </span>يمكن للثقافة البصرية أن تستخدم
+                            للإقناع والتأثير على الآخرين، حيث يمكن استخدامها لنشر الأفكار والمعتقدات</p>
+
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio4=========================== -->
+<div class="mt-5 py-5" id="v4VideoContainer"  style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/G6G5QUeRvlk" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio4">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span>أهمية الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6>:من خلال دراسة الثقافة البصرية، يمكننا فهم كيف يتأثر الناس بالصور والرموز وكيفية استخدامها
+                            لتوصيل الرسائل وإثارة الانتباه وتأثيراتها على الهوية الفردية والجماعية والتواصل بين الثقافات
+                            المختلفة ومن أهمية الثقافة البصرية</h6>
+                        <p> <span class="main-color fw-bold">التواصل : </span>الثقافة البصرية تعد وسيلة قوية للتواصل
+                            والتعبير. تمكننا من إيصال الرسائل والأفكار والمشاعر بطرق بصرية قوية وفعالة، حيث يمكن أن تكون
+                            الصور والرموز أكثر قوة وتأثيرًا من الكلمات بمفردها</p>
+                        <p> <span class="main-color fw-bold"> التعبير الفني: </span>الثقافة البصرية توفر منصة للفنانين
+                            والمبدعين للتعبير عن أنفسهم وتوظيف مهاراتهم الفنية. تسمح لهم بتحويل الأفكار والرؤى إلى أعمال
+                            فنية تعبّر عن هويتهم وقضاياهم الشخصية والاجتماعية</p>
+                        <p> <span class="main-color fw-bold"> الإعلان والتسويق: </span> الثقافة البصرية تلعب دورًا
+                            حاسمًا في مجال الإعلان والتسويق. تساعد الصور والرسومات والشعارات على جذب الانتباه وتعزيز
+                            العلامات التجارية ونقل رسائل الإعلان بشكل فعّال</p>
+                        <p> <span class="main-color fw-bold"> الثقافة والتراث: </span> تساهم الثقافة البصرية في المحافظة
+                            على التراث ونقل الثقافة والتاريخ. من خلال الصور والرموز والأعمال الفنية التقليدية، يمكننا
+                            الاحتفاظ بتراثنا وتوصيله للأجيال القادمة</p>
+                        <p> <span class="main-color fw-bold"> التأثير الاجتماعي : </span> تؤثر الثقافة البصرية على النمط
+                            الحياتي والمشاعر والتفاعلات الاجتماعية. تساهم في تشكيل هوياتنا الفردية وتوجهاتنا وتأثيرنا
+                            على الآخرين</p>
+                        <p> تنمي مهارات الإدراك البصري</p>
+                        <p>تنمي مهارات التفكير الإبداعي وحل المشكلات</p>
+                        <p> <span class="main-color fw-bold"> التعليم والتوعية : </span>تستخدم الثقافة البصرية في
+                            التعليم والتوعية، حيث يمكن استخدام الرسوم التوضيحية والرسوم المتحركة والرسوم البيانية لتبسيط
+                            المفاهيم المعقدة وتعزيز التفاهم </p>
+                        <h6>باختصار، الثقافة البصرية تلعب دورًا حيويًا في التواصل والتعبير ونقل الرسائل وتشكيل الهوية
+                            والثقافة</h6>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio5=========================== -->
+<div class="mt-5 py-5" id="v5VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0 ">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/5NtirmBK3qc" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio5">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> مجالات الثقاقة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6 class="main-color">التفكير البصري: <i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+                        <p> تمثيل تفكيري يسبق الوعي, ويشمل رؤية الأشكال البصرية على أنها صور مثل الرسوم, والعلامات
+                            والرموز, وتشمل تنظيم الصور العقلية التي تدور حول الأشكال, والخطوط, والألوان, والأنسجة,
+                            والمكونات. كما يمكن تعريفه بأنه التفاعل بين الرؤية والرسم والتخيل.
+                            تنظيم الصور العقلية المرتبطة بالأشكال, والخطوط, والألوان, والأنسجة, والمكونات
+                        </p>
+                        <br>
+                        <h6 class="main-color"> التعلم البصري:<i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+                        <p>يشمل التعلم من خلال البصريات مثل الصور والوسائط المختلفة.
+                            التعلم من خلال البصريات, والأبحاث في مجال تصميم البصريات للتعليم
+                        </p>
+                        <h6 class="main-color"> الاتصال البصري :<i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </h6>
+                        <p>محاولة البشر استخدام الرموز التعبيرية والخطية للتعبير عن الأفكار, وتعليم الناس داخل وخارج
+                            النظم التعليمية</p>
+                        <br>
+                        <p>استخدام الرموز البصرية للتعبير عن الأفكار, وتوضيح المعاني</p>
+                        <img src="{%static 'img/33.jpg'%}" alt="" class="w-75">
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio6=========================== -->
+<div class="mt-5 py-5" id="v6VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dHCVFBBy3rk" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio6">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> عناصر الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p> <span class="main-color fw-bold">الخطوط المستقيمة والمنحنية والمتقطعة : </span>تستخدم الخطوط
+                            للإشارة إلى الحركة والاتجاه والتوجه في التصميم</p>
+                        <p> <span class="main-color fw-bold">الأشكال: </span>تشير إلى الشكل الهندسي الذي يمكن تحديده
+                            بواسطة الحدود الخارجية، مثل الدوائر والمربعات والمثلثات والمستطيلات. تستخدم الأشكال في تنظيم
+                            المساحة وتحقيق التوازن والتناغم في التصميم</p>
+                        <p> <span class="main-color fw-bold"> الألوان : </span>تعد الألوان عنصرًا أساسيًا في الثقافة
+                            البصرية. تنقسم الألوان إلى عدة فئات مثل الألوان الأساسية (الأحمر والأزرق والأصفر) والألوان
+                            الثانوية (الأخضر والبرتقالي والبنفسجي) والألوان الترابية والألوان الدافئة والباردة. تستخدم
+                            الألوان للتعبير عن المزاج والمشاعر وتوجيه انتباه المشاهدين</p>
+                        <p> <span class="main-color fw-bold"> المساحة : </span> تشير إلى الفراغ المحيط بالعناصر البصرية
+                            في ترتيب معين. يمكن استخدام المساحة للتحكم في تنظيم العناصر وتوجيه اهتمام المشاهدين وإيجاد
+                            التوازن والتباين في التصميم</p>
+                        <p> <span class="main-color fw-bold"> النسبة : </span> تشير إلى العلاقة بين الأحجام والأشكال
+                            والمسافات في التصميم. يمكن استخدام النسبة لإنشاء توازن وتناغم وتنظيم في التصميم</p>
+                        <p> <span class="main-color fw-bold"> النصوص : </span> تتضمن الكتابة والنصوص التي تستخدم لتوضيح
+                            الرسالة أو توجيه المشاهدين في التصميم</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio7=========================== -->
+<div class="mt-5 py-5" id="v7VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/tW8A3fLtIVc" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio7">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> مهارات الثقافة البصرية</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <p> <span class="main-color fw-bold">التعرف البصري: </span>على المواد والوسائط البصرية الرقمية
+                        </p>
+                        <p> <span class="main-color fw-bold">الإدراك البصري : </span>لأوجه الشبه والاختلاف بين المواد
+                            والوسائط البصرية الرقمية</p>
+                        <p> <span class="main-color fw-bold"> قراءة الصور والرسوم (التحليل البصري): </span>تحليل بصري
+                            شكلي للعناصر البصرية الموجودة في الصورة, وطريقة تكوينها وتركيبها, وتنظيمها, ومحتويات الصورة
+                            ومعانيها للتمكن من قراءتها وتفسيرها</p>
+                        <p> <span class="main-color fw-bold">التفسير البصري : </span>توظيف المتعلم لمعلوماته السابقة
+                            للوصول إلى الأسباب الكامنة وراء ظاهرة ما </p>
+                        <p> <span class="main-color fw-bold"> إنتاج الصور الرقمية: </span>إنتاج الصور والرسوم والمواد
+                            البصرية باستخدام البرمجيات المناسبة </p>
+                        <p> <span class="main-color fw-bold">استخدام الصور والرسوم الرقمية (الاستخدام البصري) : </span>
+                            القدرة على استخدام الصور والرسوم فس سياقات متنوعة من مواقف الحياة المختلفة</p>
+                    </address>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio8=========================== -->
+<div class="mt-5 py-5" id="v8VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/nCmf0fRpo6M" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <button class="btn  px-4 mb-4 mt-4" id="next8" disabled> التالي <i
+                        class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <div class="col-md-6" id="ts3limatVedio8">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> الانفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h5 class="main-color fw-bold"> : تعريف الإنفوجرافيك</h5>
+                        <h6>الإنفوجرافيك هو تمثيل مرئي للبيانات, والمعلومات, والمعرفة, ويعمل الإنفوجرافيك على تقديم
+                            المعلومات المعقدة بسرعة ووضوح, وأقل عدد من الكلمات</h6>
+                        <br>
+                        <h5 class="main-color fw-bold"> :عناصر الإنفوجرافيك التعليمي </h5>
+                        <h6> : وتشتمل الإنفوجرافيك على العناصر التالية</h6>
+                        <p> العناصر المرئية (الألوان, والرسوم, والرموز, والأيقونات)<i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </p>
+                        <p>عناصر المعرفة (الحقائق, والمراجع, والإحصاء, والنصوص) <i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </p>
+                        <p>عناصر المحتوى (المقدمة, والرسالة, والمعلومات) <i
+                                class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> </p>
+                        <img src="{%static 'img/34.jpg'%}" alt="" class="w-75">
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio9=========================== -->
+<div class="mt-5 py-5" id="v9VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div id="player" claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/2Y1ewa-nJ4o" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio9">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> الفرق بين الإنفوجرافيك التعليمي
+                        والمفاهيم المرتبطة به</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6>يرتبط الإنفوجرافيك التعليمي ببعض المفاهيم مثل الثقافة البصرية, والثقافة الرقمية وتمثيل
+                            البيانات, وفيما يلي مقارنة بين الإنفوجرافيك التعليمي وهذين المفهومين لبيان الاختلاف بينهما
+                            وبين الإنفوجرافيك التعليمي: </h6>
+                        <br>
+                        <h5 class="main-color fw-bold"> :الإنفوجرافيك والثقافة البصرية</h5>
+                        <p>الثقافة البصرية هي مجموعة القيم, والمعتقدات, والممارسات, والتعابير التي ترتبط بالرؤية
+                            والوسائط البصرية. وتعتبر الثقافة البصرية جزءًا من الثقافة العامة للمجتمع، وتتعلق بكيفية
+                            فهمنا وتفسيرنا للعالم من خلال المشاهدة والتصوير والتصميم</p>
+                        <br>
+                        <p>وتشمل الثقافة البصرية مجموعة واسعة من العناصر والمظاهر، بما في ذلك الفنون التشكيلية، والتصميم
+                            الجرافيكي، والتصوير الفوتوغرافي، والسينما، والإعلانات، والرسوم المتحركة، والرسوم الهزلية،
+                            والرموز، والشعارات، والأيقونات، والعلامات التجارية، والإعلام المرئي بشكل عام</p>
+                        <p>والإنفوجرافيك يعتبر نوعًا محددًا من التقافة البصرية، وهو يعتمد بشكل أساسي على الرسومات
+                            والرموز والأيقونات لنقل المعلومات. يستخدم الإنفوجرافيك التصميم البصري لجذب الانتباه وإيصال
+                            المعلومات بشكل بسيط وسريع</p>
+
+                        <h5 class="main-color fw-bold"> :الإنفوجرافيك التعليمي وتمثيل البيانات</h5>
+                        <p>عادة ما يستخدام الإنفوجرافيك وتمثيل البيانات Data Visualization في كثير من المصادر بالتبادل
+                            على أنهما مترادفان, غير أن الإنفوجرافيك له خصائص مميزة تفوق تمثيل البيانات. فتمثيل البيانات
+                            يشمل التمثيل المرئي للبيانات الإحصائية فقط بشكل مرئي, أما الإنفوجرافيك فيشمل أكثر من ذلك؛
+                            فهو يوضح موضوع كامل باستخدام النصوص والعناصر الرسومية المتنوعة في عرض أشبه بالقصة.
+                            فالإنفوجرافيك يشتمل على المقدمة التي تجذب انتباه القارئ, والرسالة الرئيسة, والخاتمة بشكل
+                            قصصي. وبذلك, فتمثيل البيانات يعرض جزءًا فقط من البيانات وبخاصة البيانات الإحصائية, أما
+                            الإنفوجرافيك فيعرض الموضوع كاملًا. وبالتالي, فتمثيل البيانات هو أحد أنواع الإنفوجرافيك </p>
+
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio10=========================== -->
+<div class="mt-5 py-5" id="v10VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div  claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/ri04JaVAkxE" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio10">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :خصائص الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <h6>يمكن تلخيص خصائص الإنفوجرافيك التعليمي في النقاط التالية</h6>
+                        <br>
+                        <h5 class="main-color fw-bold"> :خصائص الإنفوجرافيك التعليمي</h5>
+                        <p> <span class="main-color fw-bold"> :الترميز والاختصار </span> فالإنفوجرافيك يمتاز باختزال الكثير من النصوص في عناصر محددة</p>
+                        <p> <span class="main-color fw-bold"> :الاتصال البصري</span> يعتمد الإنفوجرافيك على تمثيل المعلومات بصريًا مما يسهل استيعابها</p>
+                        <p> <span class="main-color fw-bold"> :القابلية للمشاركة</span> يمكن مشاركة الإنفوجرافيك بسهولة</p>
+                        <p> <span class="main-color fw-bold"> :التصميم الجذاب</span>يساعد الإنفوجرافيك بدور كبير في جذب انتباه المتعلم </p>
+                        <p> <span class="main-color fw-bold"> :قدرته الإثرائية</span>يمكن إثراء الإنفوجرافيك من خلال إضافة الروابط </p>
+                        <br>
+                        <h5 class="main-color fw-bold"> : مزايا الإنفوجرافيك التعليمي</h5>
+                        <p> تقديم المعلومات المعقدة بطريقة مبسطة وبشكل مرئي <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                    
+                        <p> تقديم المعلومات بشكل منهجي ومنظم<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>
+                        <p> عرض المعلومات بسرعة, وبشكل تفاعلي<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> تلخيص النقاط المهمة في المقرر<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> توضيح العلاقات بين المفاهيم والمقارنات بسهولة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> تقديم الأنشطة للمتعلمين بسهولة.<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> معالجة النص والصور في وقت واحد<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> تدعيم التفكير الناقد والإبداعي لدى الطلاب<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> استيعاب أنماط المتعلمين المختلفة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>    
+                        <p> توضيح المفاهيم المجردة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p> 
+                        <p> تدعيم سرعة التواصل بالمعلومات<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                     
+                         </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio11=========================== -->
+<div class="mt-5 py-5" id="v11VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div  claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/kyP1E0vb274" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio11">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :أنواع الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                        <br>
+                        <h5 class="main-color fw-bold" > : الإنفوجرافيك الثابت </h5>
+<p>يتم تقديمه بدون حركة سواءً رقمي أو مطبوع, وغالبًا ما تكون صورة واحدة بدون أي عناصر متحركة, وينقسم إلى قسمين: الإنفوجرافيك الأفقي, والرأسي</p>
+                      <br>
+<h5 class="main-color fw-bold"> : الإنفوجرافيك المتحرك</h5>
+<p>يستخدم الألوان, والأصوات, والانتقالات لجذب انتباه المستخدم وتظهر في مواقع التواصل الاجتماعي, والأجهزة الرقمية, والتليفزيون والفيديو</p>
+<br>
+<h5 class="main-color fw-bold"> : الإنفوجرافيك التفاعلي</h5>
+<p>يسمح للمستخدم بالتفاعل مع الإنفوجرافيك مثل الإجابة عن بعض الأسئلة, ويحتوي على عناصر متحركة تتيح للمستخدم التفاعل مع البيانات</p>
+                         </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========================================================vedio12=========================== -->
+<div class="mt-5 py-5" id="v12VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div  claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/7WP05jo2sCE" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio12">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :أهداف استخدام الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                      
+                        <p> تنظيم الأفكار بطريقة مفيدة ومتماسكة من خلال توضيح المفاهيم بصريًا    <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                    
+                        <p> توضيح البيانات الإحصائية بسهولة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i>
+                        <p> توضيح العلاقات بين المفاهيم المعقدة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> المقارنة بين المعلومات, وتوضيح الخصائص المميزة للموضوعات<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p>جعل البيانات ذات معنى من خلال الأمثلة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> السرد القصصي بطريقة مثيرة تجمع بين النصوص والصور<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> إقناع القارئ بالمعلومات<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> عرض المعلومات في الكتب, والمجلات, والإعلانات, ومواقع التواصل <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>      
+                        <p> عرض المعلومات المركبة بصورة مفصلة وبسيطة<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>    
+                        <p> القبول: وتعتمد على فكرة الاتصال المرئي وجذب انتباه المتعلم<i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p> 
+                        <p> الفهم: ينبغي أن يُمكن الإنفوجرافيك القارئ من فهم المعلومات المقدمة <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                     
+                        <p>   الاحتفاظ بالمعلومات: من خلال جعل المتعلم يتذكر المعلومات بسهولة   <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>                     
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio13=========================== -->
+<div class="mt-5 py-5" id="v13VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div  claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/NQHEBLyvdJc" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio13">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :معايير تصميم الإنفوجرافيك التعليمي</h5>
+                    <address class="serviceFooter" style="text-align: right;">
+                  
+
+
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  <div class="d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                    <h6 class="m-0 pb-0">:معايير تتعلق بالعنوان </h6>
+                                  </div>
+                                  
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  <address class="serviceFooter rtl" style="text-align: right;">
+                                    <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> كتابة العنوان في مركز الإنفوجرافيك </p>
+                                    <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>اختيار عنوان قصير</p>
+                                    <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>العنوان يعبر عن المحتوى</p>
+                                    <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>كتابة العنوان بحجم كبير</p>
+                                    <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>العنوان يجذب انتباه القارئ</p>
+                                  </address>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0">تعليمات تتعلق بتنسيق النص</h6>
+                                    </div>
+                                    
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام أنواع خطوط
+                                        مقروءة</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين حجم الإنفوجرافيك
+                                        والمحتوى الموجود فيه</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين العنوان الرئيس
+                                        والعناوين الفرعية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عدم استخدام أنواع خطوط مختلفة في
+                                        الإنفوجرافيك الواحد</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> الاعتدال في استخدام تنسيق
+                                        الخطوط(خط سميك/ مائل) واستخدامه عند الحاجة</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عدم الافراط في إضافة المسافات بين
+                                        الأسطر</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام النقاط لتنظيم المحتوى</p>
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0"> تعليمات تتعلق بجودة المحتوى</h6>
+                                    </div>
+                                   
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                  data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> - توضيح العناصر
+                                        الأساسية والفرعية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> دقة البيانات والحقائق, والصور
+                                        المستخدمة, والرسوم البيانية والتوضيحية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> صحة المفاهيم والتعريفات المستخدمة
+                                      </p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> صحة المحتوى من الناحية اللغوية
+                                      </p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عرض المحتوى باختصار</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> تحقيق الوحدة للمحتوى</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> عرض المحتوى في إطار قصصي</p>
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0"> تعليمات اختيار الرسوم والصور</h6>
+                                    </div>
+                                    
+                                  </button>
+                                </h2>
+                                <div id="flush-collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الصور
+                                        المناسبة</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين النصوص والرسوم والصور
+                                        التوضيحية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الرسوم التوضيحية التي
+                                        تثير الفضول وتجذب الانتباه</p>
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">                
+                                    <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0">   تعليمات تتعلق باختيار الألوان</h6>
+                                    </div>
+                                  </button>
+                                </h2>
+                                <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الألوان
+                                        الهادئة للخلفية, والألوان الزاهية للنص</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الألوان الأكثر سطوعًا
+                                        للعناصر المهمة, والأقل سطوعًا للعناصر الفرعية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين الألوان في حالة
+                                        استخدام أكثر من لون للنص</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التباين بين لون النص والخلفية</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> استخدام الألوان باعتدال.</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين ألوان الأشكال وألوان
+                                        النصوص</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> التناسق بين عناصر الإنفوجرافيك
+                                        المختلفة</p>
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                
+                              <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button collapsed rtl" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">                 
+                                     <div class="d-flex justify-content-center align-items-center">
+                                      <i class="fa-solid fa-list-check ps-2 yell-color fs-5"></i>
+                                      <h6 class="m-0 pb-0">    تعليمات تتعلق بالتصميم والجماليات</h6>
+                                    </div>
+                                  </button>
+                                </h2>
+                                <div id="flush-collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                    <address class="serviceFooter rtl" style="text-align: right;">
+                                      <p class="addre"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> اختيار التصميم
+                                        المناسب للجهاز(طولي- عرضي). </p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> تصميم الإنفوجرافيك بحجم مناسب</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> اختيار نوع الإنفوجرافيك المناسب
+                                        للمحتوى</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> إضافة الروابط لمزيد من المعلومات
+                                        هو أحد العناصر المهمة</p>
+                                      <p><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i> سرد المعلومات بشكل قصصي مشوق
+                                        وجذاب من خلال تنظيم عناصر التصميم لتكون بشكل قصصي مرئي</p>
+                                    </address>
+                                  </div>
+                                </div>
+                              </div>
+                
+                            </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================vedio14=========================== -->
+<div class="mt-5 py-5" id="v14VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div  claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/F1rIfTQCn8A" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio14">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :برمجيات تصميم الإنفوجرافيك التعليمي </h5>
+                    <address class="serviceFooter rtl" style="text-align: right;">
+
+                        <p> <span class="main-color fw-bold"> Adobe Photoshop :</span> هو برنامج تحرير الصور الرائد في العالم. ويُستخدم لتحرير الصور, وإنشاء الرسومات الرقمية</p>
+                        <p> <span class="main-color fw-bold">CorelDRAW :</span> هو برنامج رسومات متجهة يُستخدم لإنشاء الرسومات, واللوحات, والتصاميم الأخرى</p>
+                        <p> <span class="main-color fw-bold"> Illustrator Adobe :</span> هو برنامج رسومات متجهة يُستخدم لإنشاء الرسومات, وهو مشابه لـ CorelDRAW، ولكنه أكثر شيوعًا بين المصممين المحترفين</p>
+                        <p> <span class="main-color fw-bold"> InDesign :</span>و برنامج نشر مكتبي يُستخدم لإنشاء تخطيطات للمنشورات المطبوعة والرقمية </p>
+                        <p> <span class="main-color fw-bold"> Adobe Aftereffect :</span>هو برنامج مؤثرات بصرية يُستخدم لإنشاء الرسوم المتحركة, والتأثيرات المرئية للأفلام والتلفزيون والويب</p>
+                        <br>
+                   <div class="contentwebsite ">
+                    <h5 class="main-color fw-bold"> :مواقع تصميم الإنفوجرافيك التعليمي</h5>
+                    <p> Piktochart <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Venngage <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>
+                    <p> Easei.ly <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Infogr.am <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Visua.ly <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>            
+                    <p> Canva <i class="fa-solid fa-circle-check ps-2 yell-color fs-6"></i> </p>   
+                   </div>         
+
+                    </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- =========================================================vedio15========================== -->
+<div class="mt-5 py-5" id="v15VideoContainer" style="display: none;" >
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div  claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/nTCDPT0fyrU" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio15">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :خطوات تصميم الإنفوجرافيك</h5>
+                    <address class="serviceFooter rtl" style="text-align: right;">
+
+                        <p> <span class="main-color fw-bold"> المرحلة الثانية :</span> صياغة الهدف العام والأهداف التعليمية: في هذه المرحلة يتم صياغة الهدف العام للإنفوجرافيك, وصياغة الأهداف الفرعية </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الثالثة :</span> تحليل خصائص المتعلمين: تحديد خصائص المتعلمين في الانفوجرافيك يساعد على توجيه التصميم نحو الجمهور المستهدف بشكل أفضل مثل مستوى المعرفة, والاهتمامات, وأسلوب التعلم </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الرابعة :</span> جمع المعلومات الصحيحة وتوثيقها: جمع المعلومات الصحيحة وتوثيقها من مصادر متعددة هو خطوة مهمة في تصميم الانفوجرافيك لضمان دقة ومصداقية المحتوى </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الخامسة :</span>وضع سيناريو التصميم: وضع سيناريو التصميم هو عملية تحديد كيفية تنظيم المعلومات والعناصر البصرية داخل الانفوجرافيك بشكل منطقي وجذاب, وضمان لجودة الإنتاج </p>
+                        <p> <span class="main-color fw-bold"> المرحلة السادسة :</span> اختيار نوع الإنفوجرافيك المناسب للهدف: يتم تحديد نوع الإنفوجرافيك المناسب من بين الأنواع التي سبق ذكرها</p>
+                        <p> <span class="main-color fw-bold"> المرحلة السابعة :</span>اختيار الأدوات التكنولوجية المناسبة: وفي هذه المرحلة يتم تحديد الأدوات التكنولوجية المناسبة </p>
+                        <p> <span class="main-color fw-bold"> المرحلة الثامنة :</span>الإنتاج المبدئي للإنفوجرافيك: وفي هذه المرحلة يتم إنتاج الإنفوجرافيك بشكل مبدئي في ضوء سيناريو التصميم, مع مراعاة معايير تصميم وإنتاج الإنفوجرافيك التي سبق ذكرها </p>
+                        <p> <span class="main-color fw-bold"> المرحلة التاسعة :</span> التقويم: في هذه المرحلة، يتم مراجعة الإنفوجرافيك النهائي بعد إنتاجه المبدئي وتقييمه بغرض التأكد من جودته وفعاليته في تحقيق الهدف </p>
+
+                    </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- =========================================================vedio16========================== -->
+<div class="mt-5 py-5" id="v16VideoContainer" style="display: none;">
+    <div class="container">
+        <div class="row m-0 p-0">
+            <div class="col-md-6 animate__animated animate__zoomIn">
+                <div  claas="w-100 ">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/UPAG-yaeGBg" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-6" id="ts3limatVedio16">
+                <div class="text-end">
+                    <h5 class="pb-2"> <span class="main-color"> الموديول الأول: </span> :مميزات تصميم الإنفوجرافيك بتقنيات الذكاء الاصطناعي</h5>
+                    <address class="serviceFooter rtl" style="text-align: right;">
+
+                        <p> <span class="main-color fw-bold"> جعل المعلومات أكثر وضوحًا وفهمًا:</span> يمكن للرسومات المتحركة والواقعية جعل المعلومات أكثر وضوحًا وفهمًا. يمكن أن تساعد المستخدمين على فهم المفاهيم المعقدة بسهولة أكبر</p>
+                        <p> <span class="main-color fw-bold"> جعل المعلومات أكثر تفاعلية:</span> يمكن للتفاعلات القائمة على الذكاء الاصطناعي جعل المعلومات أكثر تفاعلية. يمكن للمستخدمين التفاعل مع المعلومات بطريقة أكثر طبيعية وشخصية</p>
+                        <p> <span class="main-color fw-bold"> جعل المعلومات أكثر إثارة للاهتمام:</span> يمكن أن تجعل الرسومات المتحركة والواقعية والتفاعلات القائمة على الذكاء الاصطناعي المعلومات أكثر إثارة للاهتمام. يمكن أن يساعد ذلك في جذب انتباه المستخدمين والحفاظ عليه</p>
+                     <h5>أدوات إنتاج الإنفوجرافيك بتقنيات الذكاء الاصطناعي:</h5>
+                        <p> <span class="main-color fw-bold"> Canva:</span > هذه أداة تصميم على الإنترنت تساعد في إنشاء إنفوجرافيك احترافي بسهولة. توفر Canva قوالب جاهزة وأدوات سحب وإسقاط لتخصيص التصميم. كما تستخدم Canva تقنية الذكاء الاصطناعي لتوليد نصوص ورسوم بيانية وألوان مناسبة للمحتوى</p>
+                        <p> <span class="main-color fw-bold">  Infogram :</span> هذه أداة تصميم على الإنترنت تساعد في إنشاء إنفوجرافيك تفاعلي وديناميكي. تسمح Infogram بإضافة عناصر مثل الخرائط والفيديوهات والروابط والأزرار إلى التصميم. كما تستخدم Infogram تقنية الذكاء الاصطناعي لتحليل البيانات وإظهارها بأشكال مختلفة</p>
+                        <p> <span class="main-color fw-bold"> Visme:</span>هذه أداة تصميم على الإنترنت تساعد في إنشاء إنفوجرافيك جذاب ومحترف. تقدم Visme قوالب مختلفة للإنفوجرافيك حسب المجال أو الموضوع أو الغرض. كما تستخدم Visme تقنية الذكاء الاصطناعي لإضافة رسوم متحركة وأصوات وفيديوهات إلى التصميم </p>
+                    </address>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- ==================================================== -->
+
+<div class="mt-5 py-5" id="activity" style="display: none;">
+    <div class="container">
+
+
+                <div class="text-end">
+                    <h5 class="pb-2">: نشاط (1)  </h5>
+<h2> . استخلص تطبيقات الثقافة البصرية في مجالات الحياة المختلفة  </h2>
+<textarea name="" id="" cols="90" rows="10" class="d-block w-100 "></textarea>
+<button class="btn  px-4 mb-4 mt-4 d-flex" id="finish" > التالي <i
+    class="fa-solid fa-paper-plane"></i></button>
+    
+                </div>
+     
+    </div>
+</div>
+
+<!-- ======================================================== -->
+<div class="mt-5 py-5" id="test" style="display: none;" >
+    <div class="container">
+
+
+                <div class="text-center d-flex flex-column align-items-center">
+                    <h2 class="main-color"> أحسنت  </h2>
+                    <iframe src="https://giphy.com/embed/7ATh0I7hi5OWyd66XE" width="480" height="480" ></iframe>
+                    <a id="quiz_question" class="btn px-4 mx-2 mb-2 " href="{% url 'quiz_question' quiz_name='aftermodule1'%}">الاختبار البعدى للموديل الاول </a>
+                </div>
+     
+    </div>
+</div>
+<!-- =======================================last-================================ -->
+</div>
+<div class="col-md-2 px-0">
+    <div class="NavContentLinks">
+        <ul class="nav d-flex flex-column justify-content-center text-center ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" onclick="toggleContainer('fristVideoContainer')">تعريف الثقافة البصرية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="toggleContainer('secondVideoContainer')">خصائص الثقافة البصرية</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v4VideoContainer')">أهمية الثقافة البصرية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v5VideoContainer')">مجالات الثقافة البصرية </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v6VideoContainer')"> عناصر الثقافة البصرية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v7VideoContainer')">مهارات الثقافة البصرية </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v8VideoContainer')"> تعريف الإنفوجرافيك التعليمي</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v9VideoContainer')"> الإنفوجرافيك والمفاهيم</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v10VideoContainer')"> خصائص الإنفوجرافيك</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v11VideoContainer')">أنواع الإنفوجرافيك التعليمي </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v12VideoContainer')"> أهداف الإنفوجرافيك التعليمي</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v13VideoContainer')">معايير الإنفوجرافيك التعليمي </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v14VideoContainer')"> برمجيات الإنفوجرافيك</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v15VideoContainer')">خطوات تصميم الإنفوجرافيك </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('v16VideoContainer')"> الإنفوجرافيك والذكاء الاصطناعي</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContainer('activity')"> نشاط1</a>
+              </li>
+
+        </ul>
+    </div>
+      
+</div>
+</div>
+</div>
+
+
+<script>
+    function toggleContainer(containerId) {
+        // Hide all containers
+        var containers = document.querySelectorAll('.mt-5.py-5');
+        containers.forEach(function(container) {
+            container.style.display = 'none';
+        });
+
+        // Show the selected container
+        var selectedContainer = document.getElementById(containerId);
+        selectedContainer.style.display = 'block';
+    }
+</script>
+
+<Script>
+    document.getElementById("finish").addEventListener("click" , function () {
+        document.getElementById("test").style.display = 'block'  
+        document.getElementById("activity").style.display = 'none'         
+    })
+</Script>
+
+<!-- <script src="{% static 'js/vedios.js' %}"></script> -->
+{% endblock %}

@@ -1,0 +1,304 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<header class="position-relative header">
+    <div
+    class="layer position-absolute  top-0 bottom-0 start-0 end-0 bg-opacity-25 d-flex justify-content-center align-items-center" style="background-color:rgba(0, 0, 0, 0.55) !important">
+    <div class="pe-3 text-white text-center" >
+      <h1 class="animate__animated animate__fadeIn pb-4">عزيزي الطالب المعلم مرحبًا بك في بيئة التعلم </h1>
+     <a href="/measuretest/take/" class="animate__animated animate__fadeIn btnLink "> ابدأ التعلم </a>
+    </div>
+
+  </div>
+ 
+</header>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% comment %} <div id="chatbot-container">
+  <div id="chatlog"></div>
+  <form id="chat-form">
+    {% csrf_token %}
+      <input type="text" id="user-input" placeholder="Say something...">
+      <button type="submit">Send</button>
+  </form>
+</div> {% endcomment %}
+
+
+<section class="rtl text-center my-5 py-5" id="goals">
+  <h2 class="background-color-nav fw-bolder h2Header mb-5">أهداف بيئة التعلم الذكية</h2>
+  <div class="container contentGoals">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-2 order-md-1 wow animate__animated animate__fadeInUp">
+        <div>
+          <address class="serviceFooter" style="text-align: right;">
+            <p class="addre mb-5"><i class="fa-solid fa-circle-check ps-2 yell-color fs-md-5"></i>الإلمام بالمفاهيم الأساسية للثقافة البصرية والإنفوجرافيك التعليمي</p>
+            <p class="addre mb-5"><i class="fa-solid fa-circle-check ps-2 yell-color fs-md-5"></i>التعرف على خطوات إنتاج الإنفوجرافيك التعليمي الثابت باستخدام موقع Visme</p>
+            <p class="mb-5"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>الإلمام بطريقة إنتاج الإنفوجرافيك التعليمي التفاعلي باستخدام موقع Canva</p>
+            <p class="addre mb-5"><i class="fa-solid fa-circle-check ps-2 yell-color fs-md-5"></i>قياس أثر تصميم بيئة الذكية على تنمية الجانب المعرفي لمهارات إنتاج الإنفوجرافيك التعليمي لدى الطلاب المعلمين بكلية التربية جامعة دمنهور</p>
+            <p class="mb-5"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5 "></i>قياس أثر تصميم بيئة الذكية على تنمية الجانب الأدائي لمهارات إنتاج الإنفوجرافيك التعليمي لدى الطلاب المعلمين بكلية التربية جامعة دمنهور</p>
+            <p class="mb-5"><i class="fa-solid fa-circle-check ps-2 yell-color fs-5"></i>قياس أثر تصميم بيئة الذكية على تنمية التقبل التكنولوجي لطريقة تقديم المحتوى في بيئةالتعلم الذكية لدى الطلاب المعلمين بكلية التربية جامعة دمنهور</p>
+          </address>
+        </div>
+      </div>
+      <div class="col-md-6 order-1 order-md-2 wow animate__animated animate__zoomIn">
+        <div class="p-5">
+          <img src="{%static 'img/ob1.JPG'%}" alt="" class="w-75">
+          <img src="{%static 'img/img9.JPEG'%}" alt="" class="w-75">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="rtl text-center my-5" id="rols">
+    <h2 class="background-color-nav fw-bolder h2Header  mb-5">تعليمات استخدام بيئة التعلم</h2>
+
+    <div class="row pt-5 m-0 align-items-center">
+
+      <div class="col-md-6 mt-3 px-0">
+        <div class="px-3">
+          <div className="h-50 w-50 ">
+            <video autoPlay muted loop className="w-50">
+              <source src="{% static 'img/1.mp4'%}" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6 wow  animate__animated animate__fadeInUp mt-3 px-0">
+        <div>
+          <address class="serviceFooter ps-md-5" style="text-align: right;">
+            <p class="addre mb-4 fs-6 fw-bolder">عزيزي الطالب المعلم: إليك مجموعة من التعليمات التي ستساعدك على استخدام بيئة التعلم الذكية بشكل صحيح وتحقيق الأهداف التعليمية بسهولة:</p>
+            <p class=" mb-3 "> <i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> قم بأداء اختبار الأسلوب المعرفي حتى تتمكن من دراسة المحتوى بالطريقة المناسبة لك</p>
+            <p class=" mb-3 ps-5"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> 	قم بأداء الاختبار القبلي الشامل للدخول للمحتوى</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> قم بأداء الاختبار القبلي والبعدي لكل موديول</p>
+            <p class=" mb-3 ps-5"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> 	قم بدراسة المحتوى, والتفاعل مع المعلم والطلاب في المواعيد التي سوف يتم الإعلان عنها</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i>	قم بالاستعانة بالمصادر المقترحة حتى تتمكن من إتقان المحتوى</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> استعن بأدوات التعلم الذكي وربوت الدردشة الذكية للحصول على الدعم الذكي</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> تأكد من أداء الأنشطة المرتبطة بالمحتوى</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> 	تأكد من أداء الاختبار البعدي الشامل بعد الإنتهاء من دراسة المحتوى</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> 	تأكد من الإجابة عن مفردات مقياس التقبل التكنولوجي</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i> قم بالتفاعل ومشاركة المعلومات مع زملائك من خلال أدوات الدردشة</p>
+            <p class=" mb-3"><i class="fa-solid fa-bullseye ps-2 yell-color fs-5"></i>	تواصل مع الباحثة من خلال أدوات التواصل الاجتماعي المختلفة لمزيد من الدعم البشري </p>
+          </address>
+        </div>
+      </div>
+
+  </section>
+
+  <section class="rtl text-center my-5 py-4" id="ta3limm">
+    <h2 class="background-color-nav fw-bolder h2Header my-5 text-center">أدوات التعلم الذكي</h2>
+    <h3 class="text-center mt-4 pt-3 main-color animate__animated animate__zoomIn">عزيزي الطالب المعلم <br />  استعن بأدوات التعلم الذكي في أداء الأنشطة   </h3>
+      <div class="container text-center">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light text-center m-auto py-5">
+        <div class="container-fluid text-center">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse m-auto text-center" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto text-center my-4 mb-lg-0">
+              <li class="nav-item">
+                <button class="nav-link btn btn-link" onclick="showContent('content1')">الدعم الذكي</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link btn btn-link" onclick="showContent('content2')">إنشاء الفيديو بالذكاء الاصطناعي</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link btn btn-link" onclick="showContent('content3')">إنشاء الصور بالذكاء الاصطناعي</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link btn btn-link" onclick="showContent('content4')">  محرك البحث بالذكاء الاصطناعي </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <div class="container my-4 wow animate__animated animate__zoomIn pb-4 mb-5">
+        <div id="content1" class="contents wow animate__animated animate__zoomIn">
+        <div class="row m-0 p-0 gx-5">
+          <div class="col-md-4  my-5 px-4 ">
+            <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+              <img src="{% static "img/img1.png" %}" alt="" class="w-100 " style="height: 160px;">
+              <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+              <a href="https://bard.google.com/" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-md-4  my-5 px-4 ">
+            <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+              <img src="{% static "img/img3.png" %}" alt="" class="w-100" style="height: 160px;">
+              <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+              <a href="https://www.bing.com/?/ai" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-4  my-5 px-4 ">
+            <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+              <img src="{% static "img/img4.png" %}" alt="" class="w-100" style="height: 160px;">
+              <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+              <a href="https://poe.com/" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+        </div>
+        <div id="content2" class="contents wow animate__animated animate__zoomIn" style="display:none;">
+          <div class="row m-0 p-0 gx-5 justify-content-center">
+            <div class="col-md-4  my-5 px-4 ">
+              <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+                <img src="{% static "img/img5.png" %}" alt="" class="w-100 " style="height: 160px;">
+                <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+                <a href="https://fliki.ai/" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+            
+            <div class="col-md-4  my-5 px-4 ">
+              <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+                <img src="{% static "img/img6.png" %}" alt="" class="w-100" style="height: 160px;">
+                <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+                <a href="https://www.vidnoz.com/" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+              </div>
+           </div>
+  
+          </div>
+        </div>
+
+        <div id="content3" class="contents wow animate__animated animate__zoomIn" style="display:none;">
+          <div class="row m-0 p-0 gx-5 justify-content-center">
+            <div class="col-md-4  my-5 px-4 ">
+              <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+                <img src="{% static "img/img7.png" %}" alt="" class="w-100 " style="height: 160px;">
+                <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+                <a href="https://padlet.com/" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4  my-5 px-4 ">
+              <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+                <img src="{% static "img/copilot.png" %}" alt="" class="w-100" style="height: 160px;">
+                <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+                <a href="https://copilot.microsoft.com/" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+  
+  
+          </div>
+        </div>
+
+        <div id="content4" class="contents wow animate__animated animate__zoomIn" style="display:none;">
+          <div class="row m-0 p-0 gx-5 justify-content-center">
+            <div class="col-md-4  my-5 px-4 ">
+              <div class="position-relative shadow-lg rounded-2 itemTe3lim">
+                <img src="{% static "img/img8.png" %}" alt="" class="w-100 " style="height: 160px;">
+                <div class="layersImg position-absolute top-0 bottom-0 start-0 end-0 bg-white "></div>
+                <a href="https://you.com/" class="position-absolute contentsLink" target="_blank">الذها إلي<i class="fa-solid fa-link"></i></a>
+              </div>
+            </div>
+          
+  
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="rtl text-center my-5 py-4" id="shar">
+    <h2 class="background-color-nav fw-bolder h2Header my-5 text-center">أدوات الدردشة</h2>
+    <h3 class="text-center mt-4 pt-3 main-color animate__animated animate__zoomIn">عزيزي الطالب المعلم <br />  قم بالتشارك مع الباحثة والزملاء من خلال الأدوات الأتية وفق المواعيد المحددة:  </h3>
+    <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-md-3 mt-5 " >
+        <a href="https://slack.com/">
+              <div class="cont text-center ">
+               <img src="{% static "img/17.jpg" %}" alt="" class="w-100  ">
+              </div>
+       <h3 class="pt-3">Slack</h3>
+     </a>
+         </div>
+
+      <div class="col-md-3 mt-5 " >
+   <a href="https://www.tawk.to/">
+         <div class="cont bg-info text-center ">
+          <img src="{% static "img/18.jpg" %}" alt="" class="w-100  ">
+         </div>
+  <h3 class="pt-3">tawk.to</h3>
+</a>
+    </div>
+
+    <div class="col-md-3 mt-5 " >
+      <a href="https://teams.microsoft.com/">
+            <div class="cont text-center ">
+             <img src="{% static "img/19.jpg" %}" alt="" class="w-100  ">
+            </div>
+     <h3 class="pt-3">Microsoft Kaizala</h3>
+   </a>
+       </div>
+
+
+         <div class="col-md-3 mt-5 " >
+          <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software">
+                <div class="cont text-center ">
+                 <img src="{% static "img/20.jpg" %}" alt="" class="w-100  ">
+                </div>
+         <h3 class="pt-3">Microsoft Teams</h3>
+       </a>
+           </div>
+
+           <div class="col-md-3 my-5 " >
+            <a href="https://bit.ai/">
+                  <div class="cont  text-center ">
+                   <img src="{% static "img/21.jpg" %}" alt="" class="w-100  ">
+                  </div>
+           <h3 class="pt-3">Bit Ai</h3>
+         </a>
+             </div>
+    
+  </div>
+  </section>
+
+
+  <section class="rtl text-center my-5 py-4" id="msater">
+    <h2 class="background-color-nav fw-bolder h2Header my-5 text-center"> مصادر إثرائية</h2>
+    <h3 class="text-center mt-4 pt-3 main-color animate__animated animate__zoomIn">عزيزي الطالب المعلم <br />  استخدم محرك البحث التالي لمزيد من المعلومات الإثرائية   </h3>
+    <div class="container">
+      <div class="row justify-content-center mt-4 py-3">
+        <!-- Google Search Form -->
+    <div class="w-50">  <img src="{% static "img/google.PNG" %}" alt="" class="w-100  "></div>
+        <form action="https://www.google.co.uk/search" method="GET" target="_blank">
+<div class="row justify-content-center">
+  <input class="form-control w-50 d-inline-block" type="text" name="q" placeholder="Search Google" style="padding: 10px;">
+  <input class="Searchgoogle" type="submit" value="Search" style="padding: 10px;">
+</div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
+  <script>
+    function showContent(contentId) {
+      // Hide all content divs
+      var allContent = document.querySelectorAll('.contents');
+      allContent.forEach(function(content) {
+        content.style.display = 'none';
+      });
+  
+      // Show the selected content
+      var selectedContent = document.getElementById(contentId);
+      selectedContent.style.display = 'block';
+    }
+  </script>
+
+{% endblock  %}
+
+
+
+

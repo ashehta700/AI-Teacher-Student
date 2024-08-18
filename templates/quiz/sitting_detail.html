@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load quiz_tags %}
+
+{% block title %}
+    {% trans "Result of" %} {{ sitting.quiz.title }} {% trans "for" %} {{ sitting.user }}
+{% endblock %}
+
+{% block content %}
+<div class="container" style="min-height: 100vh;" dir="rtl">
+    <div class="mx-auto">
+        <h2 class="text-end">{% trans "إسم الاختبار" %}: {{ sitting.quiz.title }}</h2>
+        <h3 class="text-end">{% trans "نوع الاختبار" %}: {{ sitting.quiz.category }}</h3>
+        <p class="text-end">{{ sitting.quiz.description }}</p>
+        <hr>
+        <p>{% trans "إسم المستخدم" %}: {{ sitting.user }}</p>
+        <p>{% trans "تاريخ الاختبار " %}: {{ sitting.end|date }}</p>
+        <p>% {{ sitting.get_percent_correct }} : {% trans "نسبة النجاح" %}</p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">{% trans "إسم السؤال" %}</th>
+                        <th scope="col">{% trans "إجابة المستخدم" %}</th>
+                        <th scope="col">{% trans "الاجابة صحيحة /  خاطئة" %}</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for question in questions %}
+                        <tr>
+                            <td>
+                                {{ question.content }}
+                                {% if question.figure %}
+                                    <div style="max-width: 100px;"><img width="100" height="100" src="{{ request.scheme }}://{{ request.get_host }}/{{ question.figure }}" alt="{{ question.figure }}"/></div>
+                                {% endif %}
+                            </td>
+                            <td>{{ question|answer_choice_to_string:question.user_answer }}</td>
+                            <td>
+                                {% if question.id in sitting.get_incorrect_questions %}
+                                    <p>{% trans "خاطئة" %}</p>
+                                {% else %}
+                                    <p>{% trans "صحيحة" %}</p>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <form action="" method="POST">{% csrf_token %}
+                                    <input type=hidden name="qid" value="{{ question.id }}">
+                                    <button type="submit" class="btn btn-danger btn-sm">{% trans "تعديل الاجابة" %}</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

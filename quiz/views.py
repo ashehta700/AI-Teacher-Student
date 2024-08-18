@@ -1,5 +1,5 @@
 import random
-
+from django.views import View
 from django.contrib.auth.decorators import login_required, permission_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render
@@ -11,6 +11,8 @@ from .models import Quiz, Category, Progress, Sitting, Question
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from .models import Message
+from django.utils import timezone
 
 
 
@@ -163,8 +165,12 @@ class QuizTake(FormView):
         if self.logged_in_user:
             self.sitting = Sitting.objects.user_sitting(request.user,
                                                         self.quiz)
-        if self.sitting is False:
-            return render(request, 'single_complete.html')
+                                                        
+        if str(self.quiz) == 'مقياس الأسلوب المعرفى' and Sitting.objects.get(user=request.user,quiz=self.quiz).current_score >=8 and self.sitting is False:
+            return render(request, 'taqid/module1.html')
+        if str(self.quiz) == 'مقياس الأسلوب المعرفى' and Sitting.objects.get(user=request.user,quiz=self.quiz).current_score < 8 and self.sitting is False:
+            return render(request, 'tabsit/module1.html')
+                # print('noo')
 
         return super(QuizTake, self).dispatch(request, *args, **kwargs)
 
@@ -243,132 +249,183 @@ class QuizTake(FormView):
 
         if self.quiz.exam_paper is False:
             self.sitting.delete()
-        print(results['quiz'].category.id)    
-        if 'quiz' in results and results['quiz'].title == 'إختبار المقياس':
+        print(self.sitting)   
+        if 'quiz' in results and results['quiz'].title == 'مقياس الأسلوب المعرفى':
             # ========= taqid
-            if results['score'] >= 8:
-                messages.success(self.request, ' تم تجاوز المقياس  بنجاح درجتك = '+ str(results['score']))
+            if results['percent'] >= 50:
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'measure_test/taeqid.html', results)
             # ========= tabsit
-            elif results['score'] < 8:
-                messages.success(self.request, 'لم يتم تجاوز المقياس درجتك = '+ str(results['score']))
+            elif results['percent'] < 50:
+                messages.success(self.request, 'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent']) + ' % ')
                 return render(self.request, 'measure_test/tabsit.html', results)
             #  =================== Qably 4aml all of this for taqid content
         if 'quiz' in results and results['quiz'].title == 'قبلي الشامل' and results['quiz'].category.id == 2 :
             if results['percent'] <= 90:
-                messages.success(self.request, ' تم تجاوز المقياس  بنجاح درجتك = '+ str(results['score']))
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'taqid/module1.html', results)
             elif results['percent'] > 90:
-                messages.success(self.request, 'لم يتم تجاوز المقياس درجتك = '+ str(results['score']))
-                return render(self.request, 'taqid/2.html', results)
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
+                return render(self.request, 'finish.html', results)
          # -------------------module 1   
-        if 'quiz' in results and results['quiz'].title == 'الاختبار القبلى للموديول الاول':
-            messages.success(self.request, ' تم تجاوز المقياس بنسبة  '+ str(results['percent']))
+        if 'quiz' in results and results['quiz'].title == 'الاختبار القبلى للموديول الاول'  and results['quiz'].category.id == 2:
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
             return render(self.request, 'taqid/mo7ta_mod1.html', results)
         
         if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديول الاول' and results['quiz'].category.id == 2  :
             if results['percent'] >= 60:
-                messages.success(self.request, ' تم تجاوز المقياس  بنسبة = '+ str(results['percent']))
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'taqid/module2.html', results)
             elif results['percent'] < 60:
-                messages.success(self.request, 'لم يتم تجاوز بنسبة = '+ str(results['percent']))
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'taqid/mo7ta_mod1.html', results)
         #  ======================== module2
         if 'quiz' in results and results['quiz'].title == 'الاختبار القبلي للموديول الثانى' and results['quiz'].category.id == 2 :
-            messages.success(self.request, ' تم تجاوز المقياس بنسبة  '+ str(results['percent']))
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
             return render(self.request, 'taqid/mo7ta_mod2.html', results)
         if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديول الثانى' and results['quiz'].category.id == 2 :
             if results['percent'] >= 60:
-                messages.success(self.request, ' تم تجاوز المقياس  بنسبة = '+ str(results['percent']))
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'taqid/module3.html', results)
             elif results['percent'] < 60:
-                messages.success(self.request, 'لم يتم تجاوز بنسبة = '+ str(results['percent']))
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'taqid/mo7ta_mod1.html', results)
         #  ======================== module3
         if 'quiz' in results and results['quiz'].title == 'الاختبار القبلي للموديول الثالث'and results['quiz'].category.id == 2 :
-            messages.success(self.request, ' تم تجاوز المقياس بنسبة  '+ str(results['percent']))
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
             return render(self.request, 'taqid/mo7ta_mod3.html', results)
-        if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديول الثانى' and results['quiz'].category.id == 2 :
-            if results['percent'] >= 60:
-                messages.success(self.request, ' تم تجاوز المقياس  بنسبة = '+ str(results['percent']))
-                return render(self.request, 'taqid/module3.html', results)
-            elif results['percent'] < 60:
-                messages.success(self.request, 'لم يتم تجاوز بنسبة = '+ str(results['percent']))
-                return render(self.request, 'taqid/mo7ta_mod3.html', results)
         
-        #  =============   ====== Qably 4aml all of this for tabsit content
+        if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديل الثالث'and results['quiz'].category.id == 2:
+            if results['percent'] >= 60:
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
+                return redirect("/bo3dy4amlta3qid/")
+            elif results['percent'] < 60:
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
+                return render(self.request, 'taqid/mo7ta_mod3.html', results)
+            
+        # =========== meqeas al taqobl al technologu >>> finish     
+        if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى الشامل' and results['quiz'].category.id == 2:
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
+            return redirect("/taqboltechtaqid/")
+        # 333333
+        if 'quiz' in results and results['quiz'].title == 'مقياس التقبل التكنولوجى' and results['quiz'].category.id == 2:
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
+            return render(self.request, 'finish.html', results)
+     
+     
+        
+        #  =============   ======  all of this for tabsit content =============
+        # ================== Qably 4aml==========================
         if 'quiz' in results and results['quiz'].title == 'قبلي الشامل' and results['quiz'].category.id == 3 :
             if results['percent'] <= 90:
-                messages.success(self.request, ' تم تجاوز المقياس  بنجاح درجتك = '+ str(results['score']))
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'tabsit/module1.html', results)
             elif results['percent'] > 90:
-                messages.success(self.request, 'لم يتم تجاوز المقياس درجتك = '+ str(results['score']))
-                return render(self.request, 'tabsit/2.html', results)
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
+                return render(self.request, 'finish.html', results)
          # -------------------module 1   
         if 'quiz' in results and results['quiz'].title == 'الاختبار القبلى للموديول الاول'and results['quiz'].category.id == 3:
-            messages.success(self.request, ' تم تجاوز المقياس بنسبة  '+ str(results['percent']))
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
             return render(self.request, 'tabsit/mo7ta_mod1.html', results)
         
         if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديول الاول'and results['quiz'].category.id == 3:
             if results['percent'] >= 60:
-                messages.success(self.request, ' تم تجاوز المقياس  بنسبة = '+ str(results['percent']))
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'tabsit/module2.html', results)
             elif results['percent'] < 60:
-                messages.success(self.request, 'لم يتم تجاوز بنسبة = '+ str(results['percent']))
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'tabsit/mo7ta_mod1.html', results)
         #  ======================== module2
         if 'quiz' in results and results['quiz'].title == 'الاختبار القبلي للموديول الثانى'and results['quiz'].category.id == 3:
-            messages.success(self.request, ' تم تجاوز المقياس بنسبة  '+ str(results['percent']))
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
             return render(self.request, 'tabsit/mo7ta_mod2.html', results)
         if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديول الثانى'and results['quiz'].category.id == 3:
             if results['percent'] >= 60:
-                messages.success(self.request, ' تم تجاوز المقياس  بنسبة = '+ str(results['percent']))
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'tabsit/module3.html', results)
             elif results['percent'] < 60:
-                messages.success(self.request, 'لم يتم تجاوز بنسبة = '+ str(results['percent']))
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'tabsit/mo7ta_mod1.html', results)
         #  ======================== module3
         if 'quiz' in results and results['quiz'].title == 'الاختبار القبلي للموديول الثالث'and results['quiz'].category.id == 3:
-            messages.success(self.request, ' تم تجاوز المقياس بنسبة  '+ str(results['percent']))
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
             return render(self.request, 'tabsit/mo7ta_mod3.html', results)
-        if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديول الثانى'and results['quiz'].category.id == 3:
+        # ========================= after module 3
+        if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى للموديل الثالث'and results['quiz'].category.id == 3:
             if results['percent'] >= 60:
-                messages.success(self.request, ' تم تجاوز المقياس  بنسبة = '+ str(results['percent']))
-                return render(self.request, 'tabsit/module3.html', results)
+                messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
+                return redirect("/bo3dy4aml/")
+                # return render(self.request, 'bo3dy4aml', results)
             elif results['percent'] < 60:
-                messages.success(self.request, 'لم يتم تجاوز بنسبة = '+ str(results['percent']))
+                messages.success(self.request,'لم يتم تجاوز الاختبار بنسبة   '+ str(results['percent'])+ ' % ')
                 return render(self.request, 'tabsit/mo7ta_mod3.html', results)
+            
+        # =========== meqeas al taqobl al technologu >>> finish     
+        if 'quiz' in results and results['quiz'].title == 'الاختبار البعدى الشامل' and results['quiz'].category.id == 3:
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
+            return redirect("/taqboltechtabsit/")
+        # 333333
+        if 'quiz' in results and results['quiz'].title == 'مقياس التقبل التكنولوجى' and results['quiz'].category.id == 3:
+            messages.success(self.request, ' تم تجاوز الاختبار  بنجاح بنسبة  '+ str(results['percent'])+ ' % ')
+            return render(self.request, 'finish.html', results)
+            
 
         
         return render(self.request, 'result.html', results)
 
 
 
-import openai
-from django.http import JsonResponse
 
-openai.api_key = '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'
+# @login_required
 def index(request):
-    if request.method == 'POST':
-        # Get user input
-        user_input = request.POST['user_input']
+    user = request.user
+    received_messages = Message.objects.filter(send_to=user)
 
-        # Call the ChatGPT API to get a response
-        response = openai.Completion.create(
-            engine='gpt-3.5-turbo-instruct',
-            prompt=f"Conversation with a user:\nUser: {user_input}\nAI:",
-            max_tokens=60,
-            n=1,
-            stop=None,
-            temperature=0.7,
-        )
+    # Check if the user has taken the exam
+    taken_exam = False
+    passed_exam = False
+    failed_exam = False
+    
+    quiz = Quiz.objects.filter(title='مقياس الأسلوب المعرفى').first()
+    sitting = Sitting.objects.filter(user=user, quiz=quiz).first()
+    if sitting:
+        taken_exam = True
+        if sitting.current_score >= 8:
+            passed_exam = True
+        else:
+            failed_exam = True
 
-        # Extract the response text from the API result
-        bot_response = response.choices[0].text.strip()
+    # Set session variables to indicate the user's exam status
+    request.session['taken_exam'] = taken_exam
+    request.session['passed_exam'] = passed_exam
+    request.session['failed_exam'] = failed_exam
 
-        # Return the response as JSON
-        return JsonResponse({'bot_response': bot_response})
-    return render(request, 'index.html', {})
+    return render(request, 'index.html', {'received_messages': received_messages})
+
+from django.http import JsonResponse
+from django.views.decorators.http import require_GET
+
+def mark_as_read(request, message_id):
+    user = request.user
+    try:
+        message = Message.objects.get(id=message_id, send_to=user)
+        if user not in message.read_by.all():
+            message.read_by.add(user)
+            message.readed_at = timezone.now()
+            message.save()
+    except Message.DoesNotExist:
+        pass  # Handle the case where the message doesn't exist or user doesn't have access
+    
+    return redirect('index') 
+
+
+def get_unread_messages(request):
+    user = request.user
+    unread_messages = Message.objects.filter(send_to=user, read_by__in=[user.id], readed_at__isnull=True)
+    messages_data = [{'subject': msg.subject, 'body': msg.body} for msg in unread_messages]
+    return JsonResponse(messages_data, safe=False)
+
+
 
 
 def login_user(request):
@@ -379,7 +436,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, 'مرحباً بــــــــــك : '+ username)
+            messages.success(request, 'مرحباً بــــــــــك  '+ username)
             return redirect("index")
         else:
             messages.success(request, 'خطأ بإسم المستخدم أو كلمة المرور ')
@@ -390,6 +447,20 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    messages.success(request, 'تم تسجيل الخروج بنجاح ..')
+    messages.success(request, 'تم تسجيل الخروج بنجاح !')
     return redirect('login')
 
+
+
+
+
+# render for modules pages 
+class TabsitModuleView(View):
+    def get(self, request, module_number):
+        template_name = f'tabsit/mo7ta_mod{module_number}.html'
+        return render(request, template_name)
+
+class TaqidModuleView(View):
+    def get(self, request, module_number):
+        template_name = f'taqid/mo7ta_mod{module_number}.html'
+        return render(request, template_name)

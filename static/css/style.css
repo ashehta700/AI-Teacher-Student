@@ -1,49 +1,69 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700;800&display=swap');
 
-@import url('./css2.css');
+
+@import url('./css2.css'); */
 :root {
-    --main-color: #0c0303;
+    --main-color: #570000;
     --second-color: black;
     --icon-Color: rgb(161, 161, 161);
     --btn-color: #537dae;
     --yell-color: rgb(177, 150, 1);
-    --background-color-nav: #093f7e;
+    /* --background-color-nav: #093f7e; */
+    --background-color-nav: #0a0096ab;
+   
     --top: 75px
 }
 
 body {
     box-sizing: border-box;
-    font-family: 'Almarai', sans-serif;
-    font-weight: 700;
-    padding: 0;
-    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-weight: 800;
+   padding: 0;
+   margin: 0;
+
 }
+
 
 .rtl,
 #tapsit {
     direction: rtl;
 }
 
+
 .contentGoals {
-    background-image: url(../img/background1.png);
+    /* background-image: url(../img/background1.png); */
     background-size: cover;
-    background-position: 50% 0;
+    background-position: -3% -106px;
 }
 
 .main-color {
     color: var(--main-color);
 }
+a.btn.px-4.mb-4.mt-4.main-background-color.text-white {
+    background-color: #6c0000;
+}
+.main-background-color {
 
+    background-color: var(--main-color);
+}
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgb(255, 255, 255) !important;
+}
 .background-color-navColor {
-    background-color: #09407eaf;
+    background-color: #1c2331;
 }
 
 .background-color-nav {
     color: var(--background-color-nav);
 }
-
+.backgroundOpec{
+    color: #1c2331;
+}
 .yell-color {
-    color: var(--yell-color);
+    color: rgb(185, 173, 0);;
 }
 
 .animate__fadeIn {
@@ -60,12 +80,10 @@ body {
 /* start Login Page */
 
 .LoginPage {
-    background-color: rgb(126 234 243 / 16%);
+    background-color: rgb(209 209 209 / 16%);
     /* height: 100vh; */
-    background-image: url(../img/wave\ \(14\).svg);
-    background-position: 76% 280px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url(../img/wave\ \(14\).svg); */
+    background-image: repeating-linear-gradient(311deg,#d5d4d4 5%, white 15%, #e7e7e7 60%);
     direction: rtl;
 }
 
@@ -88,19 +106,20 @@ content h5 {
     background-color: var(--main-color);
 }
 
-.btnLogin {
-    background-color: var(--btn-color);
+
+.btnLogin  {
+    background-color: #1c2331;
     color: white;
     padding: 10px 0;
-    border: 2px solid var(--btn-color);
+    border: 2px solid  #1c2331;
     transition: all 0.5s;
 }
 
 .btnLogin:hover {
     background-color: white;
-    color: var(--btn-color);
+    color: #1c2331;
     padding: 10px 0;
-    border: 2px solid var(--btn-color);
+    border: 2px solid #1c2331;
 }
 
 
@@ -179,20 +198,36 @@ content h5 {
 
 .btnLink {
     padding: 13px 30px;
-    color: white;
-    background-color: var(--background-color-nav);
+    color: var(--background-color-nav) ;
+    background-color: white;
     text-decoration: none;
     border-radius: 7px;
+    border:1px solid var(--background-color-nav);;
     box-shadow: 10px 10px 34px #000000b5;
+    transition: all 0.5s;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+a.animate__animated.animate__fadeIn.btnLink:hover {
+    color: white;
+    text-decoration: none;
+    background-color:  var(--background-color-nav)te;
 }
 
 .back {
-    padding: 7px 10px;
+    padding: 7px 15px;
     color: white;
     background-color: rgb(90, 0, 0);
     text-decoration: none;
     border-radius: 7px;
     box-shadow: 10px 10px 34px #000000b5;
+    border: none;
+}
+button.back.backQuioz
+{
+    padding: 7px 20px;
+    border: none; 
 }
 
 .contentQuiz h4 {
@@ -204,10 +239,9 @@ content h5 {
 
 /* start Footer */
 
-footer {
-    background-color: var(--background-color-nav);
-    color: white;
-    direction: rtl;
+.myFooter {
+
+    direction: rtl !important;
 }
 
 video {
@@ -218,25 +252,25 @@ video {
 /* Start bage Learning */
 
 .livedevquestion {
-    background-color: var(--btn-color);
+    background-color: #bdbfc1;
+    color: #212020;
+    font-weight: bold;
+    transform: translateX(15px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .contentQuiz {
-    background-color: rgba(231, 232, 235, 0.836);
+    background-color: rgb(255 255 255 / 84%);
     box-shadow: 14px 14px 22px -2px;
     border-radius: 10px;
+    border: 2px solid #cdcdcd;
 }
 
 .numberQuestion {
     border-bottom: 2px solid rgb(211, 211, 211);
 }
 
-#SuggestedSources {
-    background-image: url(../img/9.svg);
-    background-position: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .glass {
     direction: ltr !important;
@@ -324,12 +358,276 @@ video {
 }
 
 .btnQuiz {
-    background-color: green;
+    background-color: rgb(9 63 126) !important;
+    color: white!important;
+    padding: 8px 1px !important;
+    width: 15% !important;
+}
+.neext a
+{
+    background-color: rgb(9 63 126) ;
+    text-decoration: none;
     color: white;
 }
 
-;
 .btnQuiz:hover {
     color: var(--bs-btn-hover-color);
-    background-color: green !important;
+    background-color: rgb(9 63 126)!important;
+}
+.form {
+    height: 97vh;
+}
+.contentGoals address p {
+    font-family: bolder;
+    font-size: 22px;
+    color: black;
+}
+
+.model address p {
+    font-family: bolder;
+    font-size: 18px;
+    color: black;
+}
+
+.contentsLink {
+    transform: rotateY('50%');
+    right: 40%;
+    top: 100%;
+    opacity: 0;
+    text-decoration: none;
+    color: #093f7e;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.8s;
+}
+.itemTe3lim:hover .contentsLink{
+    opacity: 1;
+    top: 50%;
+    text-decoration: none;
+    transform: translateY(-50%);
+}
+.itemTe3lim:hover .layersImg{
+    opacity: 0.6;
+}
+.layersImg
+{
+    opacity: 0;
+    transition: all 0.8s;
+}
+.position-relative.shadow-lg.rounded-2.itemTe3lim {
+    box-shadow: -24px 27px 0px -3px #093f7e !important;
+}
+
+.cont
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    box-shadow: 27px 27px 56px 3px #c9c9c9 !important;
+}
+.cont img
+{
+    border-radius: 50%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--background-color-nav);
+    margin: 0 10px;
+    border: 2px solid #7b7b7b6b;
+    box-shadow: 5px 3px 4px 1px #c1c1c1;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    background-color: #ffffff;
+    color: #093f7ed4;
+}
+button#btnForm {
+    background-color: #093f7e;
+
+}
+.btnQuiz a{
+    text-decoration: none;
+    color: white;
+}
+.back:hover
+{
+    text-decoration: none; 
+    color:white
+}
+
+.list-group-item:focus, .list-group-item:hover {
+    z-index: 1;
+    text-decoration: none;
+    background-color: #cfd2d5;
+}
+
+a
+{
+    text-decoration: none !important;
+}
+
+a.goExam {
+    background-color: #1f3b72;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+h2.background-color-nav.fw-bolder.h2Header.mb-5 {
+    text-align: center !important;
+}
+
+
+
+
+
+#SuggestedSources {
+    background-image: url(../img/30.jpg);
+    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.backgrounQuiz 
+{
+    background-image: url(../img/30.jpg);
+    background-size: cover;
+    background-position: -3% -106px;
+}
+
+
+#goals,#fristVideoContainer
+{
+    background-image: url(../img/30.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+button#next1 , button#next2 , button#next3 , a#quiz_question , button#next4 , button#next5 , button#next6
+button#next7 , button#next8 , button#next9 , button#next10 , button#next11 , button#next12 ,button#next13
+button#next14 , button#next15 , button#next16 , button#finish
+{
+    background-color: #1c2331;
+    color: white;
+    padding: 7px 5px;
+    border: 2px solid  #1c2331;
+    transition: all 0.5s;
+}
+/* button#next1:hover {
+    background-color: white;
+    color: #1c2331;
+
+} */
+
+.container.Contentsform {
+    border: 1px solid #afafaf;
+    direction: rtl;
+    border-radius: 9px;
+    box-shadow: -1px 7px 18px 5px #4a4848;
+    padding: 84px 15px;
+}
+div#q {
+    background-color: #f1f1f1;
+    border: 2px solid #bbbbbb;
+}
+input[type="submit"] {
+    border-radius: 6px;
+    background-color:#4385f5;
+    color: white;
+
+    border: none;
+}
+input.Searchgoogle
+{
+    width: 15%;
+}
+.model h6 {
+    text-align: right;
+}
+button.accordion-button {
+    direction: rtl;
+}
+.accordion-body address p{
+    direction: rtl !important;
+}
+h2.accordion-header {
+    direction: rtl;
+}
+.contentwebsite
+{
+    direction: ltr;
+}
+a.nav-link
+{
+    color: white;
+    font-weight: bold;
+}
+.nav-link:focus, .nav-link:hover , a.nav-link:hover {
+    color: #e3c000;
+}
+
+.NavContentLinks {
+    --bs-bg-opacity: 1;
+    background-color: rgb(28 35 49) !important;
+    box-shadow: 9px -20px 13px 11px black;
+}
+
+
+
+/* Custom styles for Toastr notifications */
+.toast-top-right-20 {
+    top: 90px; /* Adjust as needed */
+    right: 1%; 
+   opacity: 1;
+  }
+  /* Custom styles for Toastr notifications */
+.toast {
+    opacity: 1 !important; /* Set opacity to 1 */
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Style the progress bar */
+  .toast-progress {
+    background-color: #fff;
+  }
+  
+  /* Override the default position class */
+  .toast-top-right {
+    top: 20px;
+    right: 20px;
+  }
+  a.back.textDecoration.py{
+    padding: 11px 10px !important;
+}
+
+
+
+/* Custom CSS */
+.dropdown-menu {
+    background-color: #f8f9fa; /* Background color of the dropdown menu */
+    border: none; /* Remove border */
+}
+
+.dropdown-menu a.dropdown-item {
+    color: #000; /* Text color of dropdown items */
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    background-color: #e9ecef; /* Background color on hover */
+}
+
+/* Optional: Adjust padding/margins for better spacing */
+.submenu.dropdown .dropdown-menu {
+    padding: 10px;
+    margin-top: 0;
 }

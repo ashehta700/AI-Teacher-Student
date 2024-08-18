@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load i18n%}
+
+{% block title %}
+  {{ quiz.title }}
+{% endblock %}
+
+{% block description %}
+  {{ quiz.title }} - {{ quiz.description }}
+{% endblock %}
+
+{% block content %}
+
+{% if previous.answers %}
+  <p class="muted"><small>{% trans "The previous question" %}:</small></p>
+  <p>{{ previous.previous_question }}</p>
+
+  {% if previous.previous_outcome %}
+    <div class="alert alert-success">
+  {% else %}
+    <div class="alert alert-warning">
+  {% endif %}
+    <p>
+      <small>{% trans "Your answer was" %}</small>
+      <strong>{{ previous.previous_outcome|yesno:"correct,incorrect" }}</strong>
+    </p>
+  </div>
+
+  {% include 'correct_answer.html' %}
+
+  <p><strong>{% trans "Explanation" %}:</strong></p>
+  <div class="well " style="background-color: #fcf8e3;">
+    <p>{{ previous.previous_question.explanation }}</p>
+  </div>
+
+{% endif %}
+
+{% if question %}
+  <div class="backgroundQuiz py-5">
+    <div class="container mb-5 py-2 Contentsform bg-white bg-opacity-75 w-75 animate__animated animate__zoomIn">
+      <div class="text-center d-flex justify-content-center">
+        <i class="fa-solid fa-quote-right backgroundOpec" style="--fa-animation-duration: 3s;"></i>
+        <h4 class="fw-bold pt-2 px-2">
+          {{ quiz.title }} 
+        </h4>
+        <i class="fa-solid fa-quote-right backgroundOpec" style="--fa-animation-duration: 3s;"></i>
+      </div>
+      <div class="d-flex justify-content-between ">
+        {% if progress %}
+          <div class="livedevquestion text-end  py-2 px-4">
+            {% trans "السؤال رقم" %} {{ progress.0|add:1 }} {% trans "من" %} {{ progress.1 }}
+          </div>
+        {% endif %}
+      </div>
+      
+      <p class="lead fw-bolder main-color pt-4"> س:{{ question.content }} ؟</p>
+      
+      {% if question.figure %}
+	  <img class="img-fluid rounded" height="250" width="250" src="{{ request.scheme }}://{{ request.get_host }}/uploads/{{ question.figure }}" alt="{{ question.figure }}">
+	  <h6>الشكل التوضيحي </h6>
+      {% endif %} 
+      
+      <form action="" method="POST">{% csrf_token %}
+        <input type=hidden name="question_id" value="{{ question.id }}">
+      
+        <ul class="list-group">
+          {% for answer in form.answers %}
+            <li class="list-group-item fs-6 fw-bold">
+              {{ answer }}
+            </li>
+          {% endfor %}
+        </ul>
+        
+        {% if progress.0|add:1 == progress.1 %}
+          <div class="w-100 d-flex justify-content-end mt-3 ">
+            <input type="submit" value={% trans "تأكيد الاجابة" %} class="btn btnQuiz">
+          </div>
+        {% else %}
+          <div class="w-100 d-flex justify-content-end mt-3 ">
+            <input type="submit" value={% trans "التالى" %} class="btn btnQuiz">
+          </div>
+        {% endif %}
+      </form>
+      
+    {% endif %}
+    </div>
+  </div>
+{% endblock %}

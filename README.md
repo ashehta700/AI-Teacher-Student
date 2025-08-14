@@ -95,9 +95,10 @@ python manage.py runserver
 http://127.0.0.1:8000/
 ```
 📸 Screenshots
-![Home Page](./static/screenshots/home.png)
-![Quiz Interface](./static/screenshots/quiz.png)
-![Admin Dashboard](./static/screenshots/admin.png)
+![Admin Panel](./static/img/Admin%20Panel.jpg)
+![Django Administration ](./static/img/Django%20Administation.jpg)
+![Home Page](./static/img/HomePage.jpg)
+![Quiz Page](./static/img/quiz.jpg)
 
 
 🎯 Learning Outcomes
